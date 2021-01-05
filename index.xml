@@ -171,15 +171,85 @@ Three
     </item>
     
     <item>
-      <title>Example Project</title>
+      <title>Colvillea</title>
       <link>https://hearwindsaying.github.io/project/example/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/project/example/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+      <description>&lt;h1 id=&#34;colvillea&#34;&gt;Colvillea&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/Hearwindsaying/Colvillea/blob/master/examples/Gallery/dining-room_interactive.jpg&#34; alt=&#34;Dining-room&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; is a physically based global illumination renderer running on GPU. It relies on &lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX&lt;/a&gt; to achieve parallelism by leveraging GPU resources, resulting in high performance ray tracing rendering.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Here are some motivations and objectives of building Colvillea:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ease for implementation of ray tracer in GPU. Writing a GPU renderer from scratch could be of great difficulty and hard to get optimal performance. Debugging is also a pain in the neck. There might be a way out for all these problems thanks to OptiX.&lt;/li&gt;
+&lt;li&gt;Deliver RTX hardware acceleration for faster rendering. OptiX is one of the three ways for enabling RTCores so as to achieve higher ray tracing efficiency when possible.&lt;/li&gt;
+&lt;li&gt;Potential for implementation of some state-of-the-art rendering technologies. This is a personal project written during my learning of computer graphics. In the end, it should be both easy and convenient to extend to adding more features. It&amp;rsquo;s also interesting to try out rendering algorithms in GPU to explore a better efficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;h3 id=&#34;light-transport&#34;&gt;Light Transport&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Direct Lighting&lt;/li&gt;
+&lt;li&gt;Unidirectional Path Tracing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reflection-models&#34;&gt;Reflection Models&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lambertian BRDF&lt;/li&gt;
+&lt;li&gt;Specular BRDF (Perfect Mirror)&lt;/li&gt;
+&lt;li&gt;Specular BSDF (Perfect Glass)&lt;/li&gt;
+&lt;li&gt;Ashikhmin-Shirley BRDF (Rough Plastic)&lt;/li&gt;
+&lt;li&gt;GGX Microfacet BRDF (Rough Conductor)&lt;/li&gt;
+&lt;li&gt;GGX Microfacet BSDF (Rough Dielectric)&lt;/li&gt;
+&lt;li&gt;Dielectric-Couductor Two Layered BSDF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sampler&#34;&gt;Sampler&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Independent Sampler&lt;/li&gt;
+&lt;li&gt;Halton QMC Sampler (Fast Random Permutation)&lt;/li&gt;
+&lt;li&gt;Sobol QMC Sampler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;filter-progressive&#34;&gt;Filter (Progressive)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Box filter&lt;/li&gt;
+&lt;li&gt;Gaussian filter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rendering-mode&#34;&gt;Rendering Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Progressive Rendering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;light-source-models&#34;&gt;Light Source Models&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Point Light&lt;/li&gt;
+&lt;li&gt;Quad Light (Spherical Rectangular Sampling)&lt;/li&gt;
+&lt;li&gt;Image-Based Lighting (HDRI Probe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;camera&#34;&gt;Camera&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pinhole Camera&lt;/li&gt;
+&lt;li&gt;Depth of Field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;geometry&#34;&gt;Geometry&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Triangle Mesh (Wavefront OBJ)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LDR/HDR Image I/O with Gamma Correction&lt;/li&gt;
+&lt;li&gt;Interactive rendering with editing scene&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;work-in-progress&#34;&gt;Work In Progress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade to OptiX 7.1&lt;/li&gt;
+&lt;li&gt;Refactor the renderer architecture: wavefront ray tracing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
+&lt;p&gt;Building &lt;strong&gt;Colvillea&lt;/strong&gt; requires OptiX 6.0 (6.5 is preferred) and CUDA 9.0 or above installed. For graphics driver on Windows platform, driver version 436.02 or later is required. All NVIDIA GPUs of Compute Capability 5.0 (Maxwell) or higher are supported but those with Turing architecture is required to access RTX hardware acceleration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; currently builds on Windows only using &lt;a href=&#34;http://www.cmake.org/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CMake&lt;/a&gt; and could be built using MSVC successfully. It&amp;rsquo;s recommeded that create a separte directory in the same level folder as src folder. Note that you are required to use VS2015 or above targeted for 64-bit as CUDA_HOST_COMPILER in configuration step.
+For better layout to support interactive rendering, please put imgui.ini file to the same directory as colvillea.vcxproj.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia OptiX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mmp/pbrt-v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PBRT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mitsuba-renderer/mitsuba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mitsuba&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
