@@ -5,7 +5,7 @@
     <link>https://hearwindsaying.github.io/</link>
       <atom:link href="https://hearwindsaying.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Lord of Light</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://hearwindsaying.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Lord of Light</title>
@@ -13,31 +13,118 @@
     </image>
     
     <item>
-      <title>Example Talk</title>
-      <link>https://hearwindsaying.github.io/event/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://hearwindsaying.github.io/event/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Spherical Light Integration over Spherical Caps via Spherical Harmonics</title>
       <link>https://hearwindsaying.github.io/publication/triplesphere/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/publication/triplesphere/</guid>
-      <description>&lt;p&gt;Summary&lt;/p&gt;
+      <description>&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;We present triple sphere, a method to integrate spherical lights over spherical caps via spherical harmonics for rendering applications.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Colvillea</title>
+      <link>https://hearwindsaying.github.io/project/example/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://hearwindsaying.github.io/project/example/</guid>
+      <description>&lt;!--
+# Colvillea
+![Dining-room](https://github.com/Hearwindsaying/Colvillea/blob/master/examples/Gallery/dining-room_interactive.jpg)
+--&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; is a physically based global illumination renderer running on GPU. It relies on &lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX&lt;/a&gt; to achieve parallelism by leveraging GPU resources, resulting in high performance ray tracing rendering.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Here are some motivations and objectives of building Colvillea:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ease for implementation of ray tracer in GPU. Writing a GPU renderer from scratch could be of great difficulty and hard to get optimal performance. Debugging is also a pain in the neck. There might be a way out for all these problems thanks to OptiX.&lt;/li&gt;
+&lt;li&gt;Deliver RTX hardware acceleration for faster rendering. OptiX is one of the three ways for enabling RTCores so as to achieve higher ray tracing efficiency when possible.&lt;/li&gt;
+&lt;li&gt;Potential for implementation of some state-of-the-art rendering technologies. This is a personal project written during my learning of computer graphics. In the end, it should be both easy and convenient to extend to adding more features. It&amp;rsquo;s also interesting to try out rendering algorithms in GPU to explore a better efficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;h3 id=&#34;light-transport&#34;&gt;Light Transport&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Direct Lighting&lt;/li&gt;
+&lt;li&gt;Unidirectional Path Tracing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reflection-models&#34;&gt;Reflection Models&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lambertian BRDF&lt;/li&gt;
+&lt;li&gt;Specular BRDF (Perfect Mirror)&lt;/li&gt;
+&lt;li&gt;Specular BSDF (Perfect Glass)&lt;/li&gt;
+&lt;li&gt;Ashikhmin-Shirley BRDF (Rough Plastic)&lt;/li&gt;
+&lt;li&gt;GGX Microfacet BRDF (Rough Conductor)&lt;/li&gt;
+&lt;li&gt;GGX Microfacet BSDF (Rough Dielectric)&lt;/li&gt;
+&lt;li&gt;Dielectric-Couductor Two Layered BSDF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sampler&#34;&gt;Sampler&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Independent Sampler&lt;/li&gt;
+&lt;li&gt;Halton QMC Sampler (Fast Random Permutation)&lt;/li&gt;
+&lt;li&gt;Sobol QMC Sampler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;filter-progressive&#34;&gt;Filter (Progressive)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Box filter&lt;/li&gt;
+&lt;li&gt;Gaussian filter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rendering-mode&#34;&gt;Rendering Mode&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Progressive Rendering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;light-source-models&#34;&gt;Light Source Models&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Point Light&lt;/li&gt;
+&lt;li&gt;Quad Light (Spherical Rectangular Sampling)&lt;/li&gt;
+&lt;li&gt;Image-Based Lighting (HDRI Probe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;camera&#34;&gt;Camera&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pinhole Camera&lt;/li&gt;
+&lt;li&gt;Depth of Field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;geometry&#34;&gt;Geometry&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Triangle Mesh (Wavefront OBJ)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LDR/HDR Image I/O with Gamma Correction&lt;/li&gt;
+&lt;li&gt;Interactive rendering with editing scene&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;work-in-progress&#34;&gt;Work In Progress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgrade to OptiX 7.1&lt;/li&gt;
+&lt;li&gt;Refactor the renderer architecture: wavefront ray tracing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
+&lt;p&gt;Building &lt;strong&gt;Colvillea&lt;/strong&gt; requires OptiX 6.0 (6.5 is preferred) and CUDA 9.0 or above installed. For graphics driver on Windows platform, driver version 436.02 or later is required. All NVIDIA GPUs of Compute Capability 5.0 (Maxwell) or higher are supported but those with Turing architecture is required to access RTX hardware acceleration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; currently builds on Windows only using &lt;a href=&#34;http://www.cmake.org/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CMake&lt;/a&gt; and could be built using MSVC successfully. It&amp;rsquo;s recommeded that create a separte directory in the same level folder as src folder. Note that you are required to use VS2015 or above targeted for 64-bit as CUDA_HOST_COMPILER in configuration step.
+For better layout to support interactive rendering, please put imgui.ini file to the same directory as colvillea.vcxproj.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia OptiX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mmp/pbrt-v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PBRT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mitsuba-renderer/mitsuba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mitsuba&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Living-Room in Unity</title>
+      <link>https://hearwindsaying.github.io/project/livingroom-in-unity/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://hearwindsaying.github.io/project/livingroom-in-unity/</guid>
+      <description>&lt;p&gt;aaa&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple Photo Viewer</title>
+      <link>https://hearwindsaying.github.io/project/simple-photo-viewer/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://hearwindsaying.github.io/project/simple-photo-viewer/</guid>
+      <description>&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;A simple photoviewer written for OOP course using C++/WinRT deployed at Universal Windows Platform.
+Common file management operations like copy, paste, remove etc. are supported.
+Standard C++17 and XAML language are used for the project. Several optimization techniques are employed to provide the user with a smooth interaction when previewing large image files.&lt;/p&gt;
 </description>
     </item>
     
@@ -167,89 +254,6 @@ Three
 &lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Colvillea</title>
-      <link>https://hearwindsaying.github.io/project/example/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://hearwindsaying.github.io/project/example/</guid>
-      <description>&lt;h1 id=&#34;colvillea&#34;&gt;Colvillea&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/Hearwindsaying/Colvillea/blob/master/examples/Gallery/dining-room_interactive.jpg&#34; alt=&#34;Dining-room&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; is a physically based global illumination renderer running on GPU. It relies on &lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX&lt;/a&gt; to achieve parallelism by leveraging GPU resources, resulting in high performance ray tracing rendering.&lt;/p&gt;
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;Here are some motivations and objectives of building Colvillea:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ease for implementation of ray tracer in GPU. Writing a GPU renderer from scratch could be of great difficulty and hard to get optimal performance. Debugging is also a pain in the neck. There might be a way out for all these problems thanks to OptiX.&lt;/li&gt;
-&lt;li&gt;Deliver RTX hardware acceleration for faster rendering. OptiX is one of the three ways for enabling RTCores so as to achieve higher ray tracing efficiency when possible.&lt;/li&gt;
-&lt;li&gt;Potential for implementation of some state-of-the-art rendering technologies. This is a personal project written during my learning of computer graphics. In the end, it should be both easy and convenient to extend to adding more features. It&amp;rsquo;s also interesting to try out rendering algorithms in GPU to explore a better efficiency.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;h3 id=&#34;light-transport&#34;&gt;Light Transport&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Direct Lighting&lt;/li&gt;
-&lt;li&gt;Unidirectional Path Tracing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;reflection-models&#34;&gt;Reflection Models&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Lambertian BRDF&lt;/li&gt;
-&lt;li&gt;Specular BRDF (Perfect Mirror)&lt;/li&gt;
-&lt;li&gt;Specular BSDF (Perfect Glass)&lt;/li&gt;
-&lt;li&gt;Ashikhmin-Shirley BRDF (Rough Plastic)&lt;/li&gt;
-&lt;li&gt;GGX Microfacet BRDF (Rough Conductor)&lt;/li&gt;
-&lt;li&gt;GGX Microfacet BSDF (Rough Dielectric)&lt;/li&gt;
-&lt;li&gt;Dielectric-Couductor Two Layered BSDF&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;sampler&#34;&gt;Sampler&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Independent Sampler&lt;/li&gt;
-&lt;li&gt;Halton QMC Sampler (Fast Random Permutation)&lt;/li&gt;
-&lt;li&gt;Sobol QMC Sampler&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;filter-progressive&#34;&gt;Filter (Progressive)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Box filter&lt;/li&gt;
-&lt;li&gt;Gaussian filter&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;rendering-mode&#34;&gt;Rendering Mode&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Progressive Rendering&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;light-source-models&#34;&gt;Light Source Models&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Point Light&lt;/li&gt;
-&lt;li&gt;Quad Light (Spherical Rectangular Sampling)&lt;/li&gt;
-&lt;li&gt;Image-Based Lighting (HDRI Probe)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;camera&#34;&gt;Camera&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Pinhole Camera&lt;/li&gt;
-&lt;li&gt;Depth of Field&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;geometry&#34;&gt;Geometry&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Triangle Mesh (Wavefront OBJ)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;LDR/HDR Image I/O with Gamma Correction&lt;/li&gt;
-&lt;li&gt;Interactive rendering with editing scene&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;work-in-progress&#34;&gt;Work In Progress&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Upgrade to OptiX 7.1&lt;/li&gt;
-&lt;li&gt;Refactor the renderer architecture: wavefront ray tracing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
-&lt;p&gt;Building &lt;strong&gt;Colvillea&lt;/strong&gt; requires OptiX 6.0 (6.5 is preferred) and CUDA 9.0 or above installed. For graphics driver on Windows platform, driver version 436.02 or later is required. All NVIDIA GPUs of Compute Capability 5.0 (Maxwell) or higher are supported but those with Turing architecture is required to access RTX hardware acceleration.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; currently builds on Windows only using &lt;a href=&#34;http://www.cmake.org/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CMake&lt;/a&gt; and could be built using MSVC successfully. It&amp;rsquo;s recommeded that create a separte directory in the same level folder as src folder. Note that you are required to use VS2015 or above targeted for 64-bit as CUDA_HOST_COMPILER in configuration step.
-For better layout to support interactive rendering, please put imgui.ini file to the same directory as colvillea.vcxproj.&lt;/p&gt;
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia OptiX&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/mmp/pbrt-v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PBRT&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/mitsuba-renderer/mitsuba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mitsuba&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

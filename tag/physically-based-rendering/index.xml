@@ -5,7 +5,7 @@
     <link>https://hearwindsaying.github.io/tag/physically-based-rendering/</link>
       <atom:link href="https://hearwindsaying.github.io/tag/physically-based-rendering/index.xml" rel="self" type="application/rss+xml" />
     <description>Physically Based Rendering</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://hearwindsaying.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Physically Based Rendering</title>
@@ -15,10 +15,12 @@
     <item>
       <title>Colvillea</title>
       <link>https://hearwindsaying.github.io/project/example/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/project/example/</guid>
-      <description>&lt;h1 id=&#34;colvillea&#34;&gt;Colvillea&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://github.com/Hearwindsaying/Colvillea/blob/master/examples/Gallery/dining-room_interactive.jpg&#34; alt=&#34;Dining-room&#34;&gt;&lt;/p&gt;
+      <description>&lt;!--
+# Colvillea
+![Dining-room](https://github.com/Hearwindsaying/Colvillea/blob/master/examples/Gallery/dining-room_interactive.jpg)
+--&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; is a physically based global illumination renderer running on GPU. It relies on &lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX&lt;/a&gt; to achieve parallelism by leveraging GPU resources, resulting in high performance ray tracing rendering.&lt;/p&gt;
 &lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;

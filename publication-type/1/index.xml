@@ -17,7 +17,8 @@
       <link>https://hearwindsaying.github.io/publication/triplesphere/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/publication/triplesphere/</guid>
-      <description>&lt;p&gt;Summary&lt;/p&gt;
+      <description>&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;We present triple sphere, a method to integrate spherical lights over spherical caps via spherical harmonics for rendering applications.&lt;/p&gt;
 </description>
     </item>
     
