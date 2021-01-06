@@ -7,7 +7,7 @@
     <description>Projects</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://hearwindsaying.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>https://hearwindsaying.github.io/project/</link>
     </image>
@@ -102,8 +102,7 @@ For better layout to support interactive rendering, please put imgui.ini file to
       <link>https://hearwindsaying.github.io/project/livingroom-in-unity/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/project/livingroom-in-unity/</guid>
-      <description>&lt;p&gt;aaa&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -111,11 +110,7 @@ For better layout to support interactive rendering, please put imgui.ini file to
       <link>https://hearwindsaying.github.io/project/simple-photo-viewer/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/project/simple-photo-viewer/</guid>
-      <description>&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
-&lt;p&gt;A simple photoviewer written for OOP course using C++/WinRT deployed at Universal Windows Platform.
-Common file management operations like copy, paste, remove etc. are supported.
-Standard C++17 and XAML language are used for the project. Several optimization techniques are employed to provide the user with a smooth interaction when previewing large image files.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>
