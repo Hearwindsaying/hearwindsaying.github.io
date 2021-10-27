@@ -1,0 +1,2443 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zihong Zhou">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Bring the living-room scene to Unity.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.6ce82d290e49e222d8344ddf65c05842.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Lord of Light">
+  <meta property="og:url" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/">
+  <meta property="og:title" content="Living-Room in Unity | Lord of Light">
+  <meta property="og:description" content="Bring the living-room scene to Unity."><meta property="og:image" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png">
+  <meta property="twitter:image" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2016-04-20T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-12-13T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/"
+  },
+  "headline": "Living-Room in Unity",
+  
+  "image": [
+    "https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png"
+  ],
+  
+  "datePublished": "2016-04-20T00:00:00Z",
+  "dateModified": "2020-12-13T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zihong Zhou"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lord of Light",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Bring the living-room scene to Unity."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Living-Room in Unity | Lord of Light</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.25bb65fc185bceea61395d5b0560127a.js"></script>
+
+  
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Lord of Light</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Lord of Light</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/media/resume.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Living-Room in Unity</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Zihong Zhou</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Dec 13, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/unity/">Unity</a>, <a href="/category/rendering/">Rendering</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/livingroom-in-unity/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 1137px; max-height: 912px;">
+  <div style="position: relative">
+    <img src="/post/render-the-livingroom-in-unity/featured.png" alt="" class="featured-image">
+    <span class="article-header-caption">The living-room rendered in Unity</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="notes">Notes</h2>
+<p>This is my final project for a virtual reality and game development course.
+My contribution is bringing a Benedikt Bitterli&rsquo;s famous rendering scene living-room to Unity and showing how we could use various rasterization techniques to approximate the beauty image produced by offline renderer.</p>
+<h2 id="forewords">Forewords</h2>
+<p>Ray tracing is an elegant algorithm used in computer graphics to synthesis realistic images.
+It shoots tremendous rays to find intersection with geometries in the scene and shading with lights and tries its best to simulate the light transport process in nature.
+The algorithm is not so fast however and it is not unusual to spend hours to days rendering a single image for the complex scenes produced by artists in the movie industry.</p>
+<p>Rasterization on the other hand, represents a way to render in an efficient way, which is used ubiquitously in realtime rendering.
+Thanks to the efforts of many graphics researchers and engineers for many years, realtime rendering could already produce some good-looking images nowadays.
+Consequently, in this project I&rsquo;d like to find out how good it could be in a game engine.</p>
+<p>Note that these days realtime ray tracing becomes popular due to the introduction of NVIDIA&rsquo;s RTX architecture in Turing GPUs, which is able to do the ray intersection in a lightning fast way.
+However, it requires a decent graphics card and my old GTX-960M is a bit out-of-date.
+So I give up the idea and turn to Unity&rsquo;s HDRP Rendering Pipeline (The High Definition Render Pipeline) for the project.</p>
+<h2 id="general">General</h2>
+<p>To generate an image as realistic as possible, we need to choose a GI (Global Illumination) system in Unity.
+We will miss the nice indirect lighting, reflections for example if we skip this part.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Global Illumination Off</th>
+<th style="text-align:center">Global Illumination On</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@8.1/manual/Images/RayTracedGlobalIllumination1.png" alt=""></td>
+<td style="text-align:center"><img src="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@8.1/manual/Images/RayTracedGlobalIllumination2.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Unity engine has several built-in solutions for achieving Global Illumination:
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-two-global-illumination-systems-in-unity-engine-image-courtesy-of-unity-documentation">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_2.png" data-caption="Two global illumination systems in Unity engine. Image courtesy of Unity documentation.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2351" height="2500">
+</a>
+
+
+  
+  
+  <figcaption>
+    Two global illumination systems in Unity engine. Image courtesy of Unity documentation.
+  </figcaption>
+
+
+</figure>
+</p>
+<div class="alert alert-note">
+  <div>
+    <em>Update in 2021: Note that Enlighten is deprecated and we are suggested to use CPU or GPU-based Progressive Lightmapper instead.</em>
+  </div>
+</div>
+<p>I attempted to use Enlighten in the first place and do not have a good experience since it is laborious to play with the parameters so as to reach my expectation.
+I then turned to CPU and GPU based Progressive Lightmapper for the job.
+Progressiveness indicates we could have a somewhat coarse preview immediately and it gradually gets refined as we wait.
+This is usually preferred by lots of artists since it saves time for fast iterations.</p>
+<h2 id="sky-and-fog-volume">Sky and Fog Volume</h2>
+<p>To begin with, we should have a sky!</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-our-sunset-skybox-for-the-living-room">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_2.png" data-caption="Our sunset skybox for the living room.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="816" height="412">
+</a>
+
+
+  
+  
+  <figcaption>
+    Our sunset skybox for the living room.
+  </figcaption>
+
+
+</figure>
+
+<p>I chose to use a sky from HDRI probe, which would also be the primary luminary for our scene.
+We just need to import our HDRI panorama as a cubemap by setting the <em>Texture Shape</em> as <em>Cube</em> and using <em>Trilinear Filter</em>:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-import-our-skybox-with-cubemap-and-trilinear-filter">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_2.png" data-caption="Import our skybox with cubemap and trilinear filter.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="526" height="913">
+</a>
+
+
+  
+  
+  <figcaption>
+    Import our skybox with cubemap and trilinear filter.
+  </figcaption>
+
+
+</figure>
+
+<p>We could preview our loaded HDRI Sky in the scene as well by setting up the Volume:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-set-up-the-hdri-sky-in-volume">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_2.png" data-caption="Set up the HDRI Sky in Volume.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="524" height="603">
+</a>
+
+
+  
+  
+  <figcaption>
+    Set up the HDRI Sky in Volume.
+  </figcaption>
+
+
+</figure>
+
+<p>Remember we need to specifiy the sky in the <strong>Lighting/Environment HDR</strong>.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-specify-our-sky-in-lighting">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_2.png" data-caption="Specify our sky in Lighting.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="526" height="147">
+</a>
+
+
+  
+  
+  <figcaption>
+    Specify our sky in Lighting.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="cleanup-the-scene">Cleanup the Scene</h2>
+<p>The living-room scene is from <a href="https://benedikt-bitterli.me/resources/" target="_blank" rel="noopener">Benedikt Bitterli&rsquo;s Rendering Resources</a>:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-the-living-room-i-chosed">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_2.png" data-caption="The living room I chosed.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="357" height="377">
+</a>
+
+
+  
+  
+  <figcaption>
+    The living room I chosed.
+  </figcaption>
+
+
+</figure>
+
+<p>I first import all meshes (*.obj) into Maya and group the objects by materials according to the provided scene description file (.xml).
+This could reduce our time for authoring and assigning materials in Unity later.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-group-and-name-objects-by-materials-in-maya">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_2.png" data-caption="Group and name objects by materials in Maya.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="406" height="659">
+</a>
+
+
+  
+  
+  <figcaption>
+    Group and name objects by materials in Maya.
+  </figcaption>
+
+
+</figure>
+
+<p>I also check the normals facing outwards and ensure the Y axis is up (the convention Unity uses):</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-visualize-the-normal-to-check-the-face-orientation">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_2.png" data-caption="Visualize the normal to check the face orientation.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1028" height="433">
+</a>
+
+
+  
+  
+  <figcaption>
+    Visualize the normal to check the face orientation.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="import-the-scene">Import the Scene</h2>
+<p>After fixing all issues in the <a href="#cleanup-the-scene">last section</a>, it should work well to export the scene as FBX and import in Unity.</p>
+<p>However, there is an issue to be considered &ndash; what is our scale of the scene?
+This is important since we have limited precision for representing decimal in computer science.
+For example, the intersection point may slightly below the surface and when it shoots a shadow ray to the light to find out whether it&rsquo;s blocked or not, it will be occluded by itself &ndash; a phenomena known as <em>shadow acne</em>.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-shadow-acne-artifacts-due-to-the-error-of-loating-point-image-courtesy-of-scratchpixel-20">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_2.png" data-caption="Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="495" height="300">
+</a>
+
+
+  
+  
+  <figcaption>
+    Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.
+  </figcaption>
+
+
+</figure>
+
+<p>An idea is to offset the intersection pooint by epsilon, which should be related to the scale of the scene.
+If our scene lives in a small world, &lsquo;a miss (ray epsilon in this context) is as good as a mile&rsquo;!
+Our scale or units thus should chosed in a <em>consistent</em> way throughout the scene to avoid these annoying artifacts.</p>
+<p>One of the simplest solutions is to compare the imported scene with the default primitive in Unity.
+A standard cube here has the length of 1 meter and I just scale our scene to make it match the scale &ndash; a 5m*10m*5m living room.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-scale-our-scene-according-to-the-standard-cube-in-unity-to-fix-the-unit">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_2.png" data-caption="Scale our scene according to the standard cube in Unity to fix the unit.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1141" height="913">
+</a>
+
+
+  
+  
+  <figcaption>
+    Scale our scene according to the standard cube in Unity to fix the unit.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="testing-global-illumination">Testing Global Illumination</h2>
+<p>After importing the models, it is time for playing around with the global illumination system now!
+We could first ignore the minute props in the scene such as plants and the statue and check whether the global illumination works well for the &lsquo;global&rsquo; environment, the look of the house.
+So enable the paneling, ceiling, floor, wall and the fireplace glass only and tick <strong>Contribute Global Illumination</strong> under <strong>Inspector/Mesh Renderer/Lighting</strong>.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-parameters-required-to-contribute-global-illumination">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_2.png" data-caption="Parameters required to contribute global illumination.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="722" height="424">
+</a>
+
+
+  
+  
+  <figcaption>
+    Parameters required to contribute global illumination.
+  </figcaption>
+
+
+</figure>
+
+<p>And we could enable the baked GI solution under <strong>Lighting/Mixed Lighting</strong> and <strong>Lighting/Lightmapping Settings</strong>.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-settings-for-lightmap-baking">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_2.png" data-caption="Settings for lightmap baking.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="488" height="839">
+</a>
+
+
+  
+  
+  <figcaption>
+    Settings for lightmap baking.
+  </figcaption>
+
+
+</figure>
+
+<p>Progressive GPU lightmapper is preferred when we have enough GPU memory (at least 4GB), which is generally the way much faster than the CPU one.
+It requires us to have a GPU supporting OpenCL 2.2 as well.</p>
+<p>Multiple importance sampling should always be enabled since it helps reduce variance by combining several sampling strategies.
+Throwing more direct and indirect samples helps reduce noises even more, but it increases the baking time as well.
+So we have to make a trade-off between the quality and time.
+But that&rsquo;s not the whole story, since we could apply filtering even if we use fewer number of samples to get a decent result.
+By selecting the <strong>Auto</strong> setting for the <strong>Filtering</strong>, unity will do all the magic for us!</p>
+<p>Since we are using baked GI solution, so we must have a second UV for lightmapping.
+This is done by Unity by enabling <strong>Generate Lightmap UVs</strong> during FBX import.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-let-unity-generate-the-lightmap-uvs-for-us">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_2.png" data-caption="Let Unity generate the lightmap UVs for us.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="472" height="347">
+</a>
+
+
+  
+  
+  <figcaption>
+    Let Unity generate the lightmap UVs for us.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="material-and-reflections">Material and Reflections</h2>
+<p>Since we have already grouped the meshes by materials, we could just assign each group of mesh with a unique material.
+For the ceiling and the wall, we want a Lambertian BSDF as specified in the xml file.
+I just use a simple <strong>HDRP/Lit</strong> shader with <strong>Metallic = 0</strong> and <strong>Smoothness = 0</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Material</th>
+<th style="text-align:center">Base Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ceiling</td>
+<td style="text-align:center">R=G=B=0.578596</td>
+</tr>
+<tr>
+<td style="text-align:left">wall</td>
+<td style="text-align:center">R=G=B=0.4528</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-setup-for-our-ceiling-material-to-match-a-lambertian-bsdf">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_2.png" data-caption="Setup for our ceiling material to match a Lambertian BSDF.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="487" height="744">
+</a>
+
+
+  
+  
+  <figcaption>
+    Setup for our ceiling material to match a Lambertian BSDF.
+  </figcaption>
+
+
+</figure>
+
+<p>For the floor and paneling, we need to emulate the substrate BSDF or rough-coating BSDF with the underlying BSDF being Lambertian and coated with a rough dielectric BSDF with GGX distribution.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-illustration-for-light-transport-in-a-rough-coating-bsdf-image-courtesy-of-mitsuba-05-documentation">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_2.png" data-caption="Illustration for light transport in a rough-coating BSDF. Image courtesy of Mitsuba 0.5 documentation.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="276" height="182">
+</a>
+
+
+  
+  
+  <figcaption>
+    Illustration for light transport in a rough-coating BSDF. Image courtesy of Mitsuba 0.5 documentation.
+  </figcaption>
+
+
+</figure>
+
+<p>Thanks to the Laurent Belcour&rsquo;s excellent work on <a href="https://belcour.github.io/blog/research/publication/2018/05/05/brdf-realtime-layered.html" target="_blank" rel="noopener">layered material</a>, we could easily simulate this kind of coating material in Unity using <strong>StackLit</strong> shader.</p>
+<p>We shall use the Shader Graph to finish the task.
+Here is what we have for the floor:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-shader-graph-setup-for-the-layered-floor-material">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_2.png" data-caption="Shader Graph setup for the layered floor material.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1029" height="597">
+</a>
+
+
+  
+  
+  <figcaption>
+    Shader Graph setup for the layered floor material.
+  </figcaption>
+
+
+</figure>
+
+<p>And the paneling material:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-shader-graph-setup-for-the-paneling">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_2.png" data-caption="Shader Graph setup for the paneling.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1028" height="656">
+</a>
+
+
+  
+  
+  <figcaption>
+    Shader Graph setup for the paneling.
+  </figcaption>
+
+
+</figure>
+
+<p>The last material for our &ldquo;global&rdquo; environment is the fireplace, which is a perfectly smooth specular shader.
+Besides setting the <strong>Smoothness = 1</strong> with <strong>StackLit</strong>, we need to deal with the reflection.
+This is one of the nasty stuff in realtime rendering &ndash; though reflection itself is a part of the global illumination, we still need to explicitly achieve the effect by using another technique &ndash; Reflection Probes.
+Here we create a reflection probe to capture the interior environment for the fireplace.
+Clicking <strong>Bake</strong> option under the <strong>Lighting</strong>, we get the nice reflection for the fireplace!</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-fix-the-reflection-of-our-fireplace">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_2.png" data-caption="Fix the reflection of our fireplace.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="497" height="884">
+</a>
+
+
+  
+  
+  <figcaption>
+    Fix the reflection of our fireplace.
+  </figcaption>
+
+
+</figure>
+
+<p>But not for the interior, oops!</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-weird-look-of-our-interior">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s12-probe-global_hu10a572bf403dc60ccca727cb6df375f0_89498_2000x2000_fit_q75_lanczos.jpg" data-caption="A weird look of our interior.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s12-probe-global_hu10a572bf403dc60ccca727cb6df375f0_89498_2000x2000_fit_q75_lanczos.jpg" class="lazyload" alt="" width="1025" height="819">
+</a>
+
+
+  
+  
+  <figcaption>
+    A weird look of our interior.
+  </figcaption>
+
+
+</figure>
+
+<p>It may not be so obvious, but the interior gets reflection from the exterior HDRI or Skybox instead of the interior &ndash; the floor is not missing, but reflecting the bright sky!
+This is due to the lack of another reflection probe for the scene.</p>
+<p>So we could easily address this by adding another probe:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-use-yet-another-reflection-probe-for-interior-reflections">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_2.png" data-caption="Use yet another reflection probe for interior reflections.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="838" height="739">
+</a>
+
+
+  
+  
+  <figcaption>
+    Use yet another reflection probe for interior reflections.
+  </figcaption>
+
+
+</figure>
+
+<p>and bake!</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-corrected-interior-look">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_2.png" data-caption="A corrected interior look.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1147" height="915">
+</a>
+
+
+  
+  
+  <figcaption>
+    A corrected interior look.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="details-and-props">Details and Props</h2>
+<p>It looks we are on the right track now, we could start to add more details for the scene!</p>
+<p>After enabling all props meshes, we begin with the brushed steel.
+It is like the fireplace glass, but we set the <strong>Metallic = 1</strong> to simulate the metal.
+As for the painting back and the table wood, we could use the same material with the floor, with different base color textures.
+The sofa, painting, pot, leaves and dirt are just the Lambertians so <strong>HDRP/Lit</strong> works well.</p>
+<p>Note that we need to use <strong>Translucent</strong> material type for the leaves and alpha cutout the geometries according to the leaves map.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-material-setup-for-the-leaves">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_2.png" data-caption="Material setup for the leaves.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="486" height="677">
+</a>
+
+
+  
+  
+  <figcaption>
+    Material setup for the leaves.
+  </figcaption>
+
+
+</figure>
+
+<p>Finally, we use a transparent surface type for the glass material.</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-material-setup-for-the-glass">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_2.png" data-caption="Material setup for the glass.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="486" height="557">
+</a>
+
+
+  
+  
+  <figcaption>
+    Material setup for the glass.
+  </figcaption>
+
+
+</figure>
+
+<p>Here comes another nasty stuff in realtime rendering &ndash; refraction.
+Refraction is notoriously difficult to achieve in realtime rendering and is usually approximated by Screen Space Refraction:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-enable-screen-space-refraction-in-the-volume-setting">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_2.png" data-caption="Enable Screen Space Refraction in the volume setting.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="487" height="500">
+</a>
+
+
+  
+  
+  <figcaption>
+    Enable Screen Space Refraction in the volume setting.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="results-and-discussions">Results and Discussions</h2>
+<p>After adding up all props and setting up the materials correctly, we could simply bake our GI and here is what I get:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-final-baked-result-for-the-living-room-in-unity">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_2.png" data-caption="Final baked result for the living room in Unity!">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1025" height="814">
+</a>
+
+
+  
+  
+  <figcaption>
+    Final baked result for the living room in Unity!
+  </figcaption>
+
+
+</figure>
+
+<p>It looks kind of cool &ndash; perhaps not in a sense of realism but in a artistic style.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-path-traced-reference-image-rendered-by-my-colvilleahttpshearwindsayinggithubioprojectexample-renderer">
+
+
+  <a data-fancybox="" href="../../project/example/featured.jpg" data-caption="Path traced reference image rendered by my &lt;strong&gt;&lt;a href=&#34;https://hearwindsaying.github.io/project/example/&#34;&gt;Colvillea&lt;/a&gt;&lt;/strong&gt; renderer.">
+
+
+  <img src="../../project/example/featured.jpg" alt=""  >
+</a>
+
+
+  
+  
+  <figcaption>
+    Path traced reference image rendered by my <strong><a href="https://hearwindsaying.github.io/project/example/">Colvillea</a></strong> renderer.
+  </figcaption>
+
+
+</figure>
+
+<p>By comparing with the ground truth image from the ray tracing [sGT Image], we find that the glass seems to be weird and we lack all the nice occlusion from the objects.
+As for the user&rsquo;s experience, I think it requires artists to pay more attention to the stuff behind rendering.
+For example, we have to consider the resolution or padding for the lightmap UVs, tuning the baking parameters, fixing light leaking due to the lack of reflection probes etc.</p>
+<p>However, the image generated still looks good and the performance in realtime framerates (~80 FPS) is appealing; or we have to wait for hours to get a noise-free image using offline ray tracing!</p>
+<p>Here is another result by leveraging the post-processing pipeline:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-featured-image-for-the-living-room-after-post-processing">
+
+
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_2.png" data-caption="Featured image for the living-room after post processing.">
+
+
+  <img data-src="/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1137" height="912">
+</a>
+
+
+  
+  
+  <figcaption>
+    Featured image for the living-room after post processing.
+  </figcaption>
+
+
+</figure>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://blogs.unity3d.com/2018/09/24/the-high-definition-render-pipeline-getting-started-guide-for-artists/" target="_blank" rel="noopener">Unity&rsquo;s Blog for HDRP</a></li>
+<li><a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@7.1/manual/index.html" target="_blank" rel="noopener">Unity&rsquo;s Documentation for HDRP</a></li>
+<li><a href="https://www.youtube.com/watch?v=k05G2QNrvPE" target="_blank" rel="noopener">ArchViz with Unity&rsquo;s HDRP</a></li>
+<li><a href="https://github.com/Unity-Technologies/FontainebleauDemo" target="_blank" rel="noopener">Fontainebleau Demo &ndash; A Unity&rsquo;s Official Demo for HDRP</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3197517.3201289" target="_blank" rel="noopener">Laurent Belcour&rsquo;s Layered BSDF Paper</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/project/">Project</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/&amp;text=Living-Room%20in%20Unity" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/&amp;t=Living-Room%20in%20Unity" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Living-Room%20in%20Unity&amp;body=https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/&amp;title=Living-Room%20in%20Unity" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Living-Room%20in%20Unity%20https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/&amp;title=Living-Room%20in%20Unity" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.572b7caf7fe601716a0f74d67d754c21.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
