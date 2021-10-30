@@ -1,0 +1,1576 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.1 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zihong Zhou">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Overview I spent a few time in 2021 learning realtime rendering techniques and graphics API such as OpenGL and DirectX 12. I then immediately turn to DirectX Raytracing (DXR) as a big fan of tracing rays.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.e50f8efa3118dee659d937688d33bfcc.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Lord of Light">
+  <meta property="og:url" content="https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/">
+  <meta property="og:title" content="Sample Results From an Anonymous DXR Renderer | Lord of Light">
+  <meta property="og:description" content="Overview I spent a few time in 2021 learning realtime rendering techniques and graphics API such as OpenGL and DirectX 12. I then immediately turn to DirectX Raytracing (DXR) as a big fan of tracing rays."><meta property="og:image" content="https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/featured.png">
+  <meta property="twitter:image" content="https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-10-28T22:05:12&#43;08:00">
+    
+    <meta property="article:modified_time" content="2021-10-28T22:05:12&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/"
+  },
+  "headline": "Sample Results From an Anonymous DXR Renderer",
+  
+  "image": [
+    "https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/featured.png"
+  ],
+  
+  "datePublished": "2021-10-28T22:05:12+08:00",
+  "dateModified": "2021-10-28T22:05:12+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zihong Zhou"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lord of Light",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Overview I spent a few time in 2021 learning realtime rendering techniques and graphics API such as OpenGL and DirectX 12. I then immediately turn to DirectX Raytracing (DXR) as a big fan of tracing rays."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Sample Results From an Anonymous DXR Renderer | Lord of Light</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.25bb65fc185bceea61395d5b0560127a.js"></script>
+
+  
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Lord of Light</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Lord of Light</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/media/resume.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Sample Results From an Anonymous DXR Renderer</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 28, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1137px; max-height: 562px;">
+  <div style="position: relative">
+    <img src="/post/sample-results-from-an-anonymous-dxr-renderer/featured.png" alt="" class="featured-image">
+    <span class="article-header-caption">Chessboard</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="overview">Overview</h2>
+<p>I spent a few time in 2021 learning realtime rendering techniques and graphics API such as OpenGL and DirectX 12.
+I then immediately turn to DirectX Raytracing (DXR) as a big fan of tracing rays.
+So this is yet another (the second) global illumination renderer I have written so far.
+Though it is quite similar to my first ray tracer <strong>Colvillea</strong>, it is based on the graphics API (DXR) as opposed to GPGPU one (like CUDA or OpenCL).</p>
+<h2 id="some-sneaky-stuff-on-the-road">Some Sneaky Stuff on the Road</h2>
+<p>I think I might have run into some issues during the journey and doing some renderings again is indeed a bit more difficult than before.
+Well, I have learned ray tracing before and related algorithms will not change if I switch to another way of implementation &ndash; no matter I write in plain C/old school C++/modern C++/CUDA/HLSL, the math and physics behind the rendering are essentially the same.
+However, the coding process could suffer:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-a-possible-two-sided-brdf-adapter-implementation-in-hlsl-2021-left-and-c11-right-the-c-code-is-from-mitsuba-05">
+
+
+  <a data-fancybox="" href="/post/sample-results-from-an-anonymous-dxr-renderer/sneaky_hu91bf3eff32c308f6c4fe73f240a807f1_1125690_2000x2000_fit_lanczos_2.png" data-caption="A possible two-sided BRDF adapter implementation in HLSL-2021 (left) and C&#43;&#43;11 (right). The C&#43;&#43; code is from Mitsuba 0.5.">
+
+
+  <img data-src="/post/sample-results-from-an-anonymous-dxr-renderer/sneaky_hu91bf3eff32c308f6c4fe73f240a807f1_1125690_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="3399" height="3854">
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    A possible two-sided BRDF adapter implementation in HLSL-2021 (left) and C++11 (right). The C++ code is from Mitsuba 0.5.
+  </figcaption>
+
+
+</figure>
+
+<p>For example, it is useful to support two-sided shading for the ray tracer.
+Since common 3d modeling packages such as Maya and Blender usually enable two-sided shading by default, artist may ignore the orientation of the surface during the modeling.
+If we look at a surface from backside, we could still receive the lighting reflected from this object.
+But checking the side orientation inside the implementation of BRDF classes is bothersome and inspired by Mitsuba, we have an elegant approach for this.
+The idea is to add a new so-called <em>two-sided BRDF</em> to wrap the <em>one-sided BRDF</em> &ndash; we keep the implementation as-is in <em>one-sided BRDF</em> (do the shading as long as the incoming ray and the outgoing ray are in the same hemisphere as the surface&rsquo;s normal) and flip the ray direction in <em>two-sided BRDF</em> when necessary.
+You could have a look at the <a href="#figure-sneaky">Figure 1</a> if you are not sure about what I mean.</p>
+<p>Well the coding in C++/C/C#&hellip; is pretty straightforward due to the language support for class, member functions, function pointers (and even templates for C++ gurus).
+However, in HLSL, none of these great features exists and I believe it&rsquo;s even worse in GLSL.
+The good news is that to avoid replicating the <em>two-sided BRDF</em> code for each BRDF type, we could use macro&hellip;
+But the bad news is HLSL&rsquo;s preprocessor are not the same as C++/C&rsquo;s preprocessor, which supports variadic macros for example.
+I thus have to manually emulate the variadic behavior and arguments forwarding (compared to modern C++, we could use variadic templates and perfect forwarding).
+A much more elegant approach to deal with this is introducing another abstraction:</p>
+<blockquote>
+<p>Computer Science is a science of abstraction -creating the right model for a problem and devising the appropriate mechanizable techniques to solve it. &ndash;Alfred Aho</p>
+</blockquote>
+<p>Fortunately, <a href="https://github.com/shader-slang/slang" target="_blank" rel="noopener">Slang</a> does this for us &ndash; a shading language enables us to write shaders efficiently with modern language features such as interfaces and generics and we could safely rely on Slang compiler to generate high performance backend code (e.g. HLSL).
+This seems to be a promising improvement worthy of trying out in the future.</p>
+<h2 id="sample-renderings-results">Sample Renderings Results</h2>
+<p>One advantage of writing ray tracers over rasterization is that we could generate some pretty images easily, and perhaps efficiently as well if we build atop RTX.
+Once we implement a simple integrator such as naive path tracing integrator with a decent BSDF such as <a href="https://www.disneyanimation.com/publications/physically-based-shading-at-disney/" target="_blank" rel="noopener">Disney Principle BSDF</a> and with some nice area lighting, appealing effects such as reflection and color bleeding are achieved.
+In realtime rendering however, the world is fragmented &ndash; we have to deal with shadows, reflections, GIs etc. separately.
+Have a look at my blog post <a href="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/" target="_blank" rel="noopener">living room in unity</a> for example, which tries to match the nice result from a simple ray tracer <strong>Colvillea</strong> using a world-leading game engine.</p>
+<p>So I can&rsquo;t wait to quickly implement all these simple components in ray tracing and support GLTF 2.0 (featuring with PBR materials) parsing, in which way I could simply export nice scene by artists from Blender and import to the path tracer.</p>
+<p>Here is how it looks like from the renderer:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-the-chessboard-scene-rendered-with-8192spp-in-8min45s-runs-in-18fps-or-55-ms-for-1-iteration-1spp-on-a-rtx-2060-minimum-gpu-requirements-for-running-dxr-api-scene-credits-httpsdavzeppelingumroadcomlqlhkchttpsdavzeppelingumroadcomlqlhkc">
+
+
+  <a data-fancybox="" href="/post/sample-results-from-an-anonymous-dxr-renderer/4_hu7bd46cd8477eb11bb13a0f3d45567f06_2773964_2000x2000_fit_lanczos_2.png" data-caption="The chessboard scene rendered with 8192spp in 8min45s. Runs in 18fps or 55 ms for 1 iteration (1spp) on a RTX 2060 (minimum GPU requirements for running DXR API). Scene credits: &lt;a href=&#34;https://davzeppelin.gumroad.com/l/QlHKc&#34;&gt;https://davzeppelin.gumroad.com/l/QlHKc&lt;/a&gt;.">
+
+
+  <img data-src="/post/sample-results-from-an-anonymous-dxr-renderer/4_hu7bd46cd8477eb11bb13a0f3d45567f06_2773964_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2845" height="1405">
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    The chessboard scene rendered with 8192spp in 8min45s. Runs in 18fps or 55 ms for 1 iteration (1spp) on a RTX 2060 (minimum GPU requirements for running DXR API). Scene credits: <a href="https://davzeppelin.gumroad.com/l/QlHKc">https://davzeppelin.gumroad.com/l/QlHKc</a>.
+  </figcaption>
+
+
+</figure>
+
+<p>Interestly, I have set Fresnel to 1.0 for specular lobe in Disney BRDF for debugging purpose and just forgetted to turn off before rendering the Chess scene and got a funny bug:
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-an-interesting-result-due-to-a-bug">
+
+
+  <a data-fancybox="" href="/post/sample-results-from-an-anonymous-dxr-renderer/stinger_huc403270b1c22fe9bc7a86de8003d5acb_2933622_2000x2000_fit_lanczos_2.png" data-caption="An interesting result due to a bug.">
+
+
+  <img data-src="/post/sample-results-from-an-anonymous-dxr-renderer/stinger_huc403270b1c22fe9bc7a86de8003d5acb_2933622_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2845" height="1405">
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    An interesting result due to a bug.
+  </figcaption>
+
+
+</figure>
+</p>
+<p>Besides its overbrightness, featuring strong specular reflections and blurring out diffuse details, another subtle difference compared to <a href=""></a> is now I cannot tell the opponent&rsquo;s chess pieces from ours! :)
+I like rendering because sometimes I could get these magical images for my bugs (instead of getting crashes and nothing in other applications).</p>
+<p>There is another scene with more complicated geometries:</p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-the-living-room-rendered-with-8192spp-in-19min33s-runs-in-10fps-or-100-ms-for-1-iteration-1spp-for-this-scene-scene-credits-httpswwwyoutubecomwatchvgn1bieb5pbqt44shttpswwwyoutubecomwatchvgn1bieb5pbqt44s">
+
+
+  <a data-fancybox="" href="/post/sample-results-from-an-anonymous-dxr-renderer/7_hu6d82ce42323c3cb4a3e0dedb5690d94a_6681547_2000x2000_fit_lanczos_2.png" data-caption="The living room rendered with 8192spp in 19min33s. Runs in 10fps or 100 ms for 1 iteration (1spp) for this scene. Scene credits: &lt;a href=&#34;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;t=44s&#34;&gt;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;t=44s&lt;/a&gt;.">
+
+
+  <img data-src="/post/sample-results-from-an-anonymous-dxr-renderer/7_hu6d82ce42323c3cb4a3e0dedb5690d94a_6681547_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2748" height="2014">
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    The living room rendered with 8192spp in 19min33s. Runs in 10fps or 100 ms for 1 iteration (1spp) for this scene. Scene credits: <a href="https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;t=44s">https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;t=44s</a>.
+  </figcaption>
+
+
+</figure>
+
+<p>Disney BRDF is used for all materials in the two scenes and several hidden quadlights are used as light sources.
+I also used Dr. Laurent Belcour&rsquo;s <a href="https://belcour.github.io/blog/research/publication/2021/06/24/sampling_bluenoise_sig21.html" target="_blank" rel="noopener">Screen Space Blue Noise Error Diffusion Sampler with XOR Scrambled Sobol sequence</a> for high quality samples pattern.
+Finally, Intel&rsquo;s OpenImageDenoiser is used for cleaning up noises left in low sample counts.</p>
+<h2 id="machine-learning-based-denoiser----a-saviour">Machine Learning Based Denoiser &ndash; A Saviour</h2>
+<p>Path tracing integrator is easy to code, but it still requires tremendous effort to reach a fully converged image without noises.
+There are quite a few denoising algorithms and open source implementations available.
+Check out <a href="https://alain.xyz/blog/ray-tracing-denoising" target="_blank" rel="noopener">Alain Galvan&rsquo;s blog</a> for a good overview of ways to denoise a path tracer.
+In a nutshell, he classifies the denoising arts into sampling based (sophisticated filters such as <a href="https://cg.ivd.kit.edu/english/svgf.php" target="_blank" rel="noopener">SVGF</a>) and machine learning based method.
+<a href="https://developer.nvidia.com/optix-denoiser" target="_blank" rel="noopener">NVIDIA&rsquo;s OptiX Denoiser</a> and <a href="https://github.com/OpenImageDenoise/oidn" target="_blank" rel="noopener">Intel&rsquo;s OpenImageDenoiser (OIDN)</a> are two representatives for machine learning denoisers, which is usually shipped with production renderers like V-Ray and Blender Cycles.
+Due to its simplicity for integration, I started with OIDN.</p>
+<p>OIDN is built and trained with Convolutional Neural Network (CNN).
+Outside the blackbox, it just works like a filter so it could be put into the postprocessing stage.
+Feed the OIDN with noisy ray tracing outputs and auxiliary buffers (albedo, normal etc.) from our AOV outputs, it gives us a noise free result in a short time.
+Well I mean a short time but it still needs some noticable time &ndash; 2s for 2K resolution on a i7-10700K cpu.</p>
+<p>This DXR ray tracer is designed to be interactive and progressive, but 2s could really block the main/UI thread and make it irresponsive.
+So I move the denoising pass to the background thread and run it from time to time asynchronously.
+The idea is to progressively accumulate a few samples, say 64 from a well designed Sobol sampler, and run the denoiser in the background.
+Once it is done, show this denoised image in the viewport and keep ray tracing.
+After running for a while, run the denoiser again and update the denoised image.
+This makes sense since we cannot easily spot the difference between denoising a 64spp input and 65spp input, but we do for the 64spp input and 90spp input.
+I find this approach works well in practice, trying to keep CPU and GPU busy and the user&rsquo;s interaction still goes smoothly:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<video controls >
+  <source src="Chessboard.mp4" type="video/mp4">
+</video>
+<p>Here are some more comparisons (drag the slide in the middle left for comparison):</p>
+<div class="comparison-slider">
+  <figure class="comparison-before">
+    <img src="0.png">
+    <div class="comparison-label">100spp Ray Tracing (84.36s)</div>
+  </figure>
+  <figure class="comparison-after">
+    <img src="1.png">
+    <div class="comparison-label">100spp Denoised (84.36s)</div>
+    <textarea class="comparison-resizer" readonly></textarea>
+  </figure>
+</div>
+<div class="comparison-slider">
+  <figure class="comparison-before">
+    <img src="2.png">
+    <div class="comparison-label">1024spp Ray Tracing (136.30s)</div>
+  </figure>
+  <figure class="comparison-after">
+    <img src="3.png">
+    <div class="comparison-label">1024spp Denoised (136.30s)</div>
+    <textarea class="comparison-resizer" readonly></textarea>
+  </figure>
+</div>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-comparisons-between-ray-traced-denoised-referenced-images">
+
+
+  <a data-fancybox="" href="/post/sample-results-from-an-anonymous-dxr-renderer/d3_hu8aee2ef56af18eec576b6a77f8b6b70b_2337739_2000x2000_fit_lanczos_2.png" data-caption="Comparisons between ray traced, denoised, referenced images.">
+
+
+  <img data-src="/post/sample-results-from-an-anonymous-dxr-renderer/d3_hu8aee2ef56af18eec576b6a77f8b6b70b_2337739_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2390" height="1289">
+</a>
+
+
+  
+  
+  <figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+    Comparisons between ray traced, denoised, referenced images.
+  </figcaption>
+
+
+</figure>
+
+<p>And a more easily noticeable verification is using ImageDiff to the ground truth:</p>
+<div class="comparison-slider">
+  <figure class="comparison-before">
+    <img src="d1.png">
+  </figure>
+  <figure class="comparison-after">
+    <img src="d2.png">
+    <textarea class="comparison-resizer" readonly></textarea>
+  </figure>
+</div>
+<h2 id="machine-learning-based-denoiser----a-saviour-if-with-our-help">Machine Learning Based Denoiser &ndash; A Saviour If With Our Help</h2>
+<p>I am kind of appalled by the advertisements of <a href="https://www.openimagedenoise.org/gallery.html" target="_blank" rel="noopener">Intel&rsquo;s OIDN gallery</a> and after trying out myself, it looks like a lifesaver to us!
+Unfortunately, this is not the whole story.
+I cannot just forget all the sophisticated algorithms invented by diligent graphics researchers and solely focus on hoping ML denoiser improve my renderings given some &lsquo;arbitrary&rsquo; inputs.
+For example, if I turn off multiple importance sampling and use light sampling only:</p>
+<p>As is shown in the video, weird structural pattern can be seen.
+It is animated since I continuously feed the denoiser with more samples input and it tries very hard to improve the result&hellip;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<video controls >
+  <source src="mis_disable.mp4" type="video/mp4">
+</video></p>
+<p>And with our help to reduce variance at first by using multiple importance sampling:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<video controls >
+  <source src="mis_enable.mp4" type="video/mp4">
+</video></p>
+<p>The roughness is set to be low and we will have a peak specular lobe, in which case light sampling cannot help too much but BSDF sampling does, resulting far fewer noises and the denoiser works pretty well now.
+As pointed out by <a href="https://cs.dartmouth.edu/~wjarosz/publications/bitterli20spatiotemporal.html" target="_blank" rel="noopener">Bitterli et al.</a>, currently these denoisers are not able to bring in the features which are not present in input samples.
+So we need to keep finding out new strategies for sampling, image reconstruction etc. to help our denoisers out.
+I suppose this is why though lots of people turn to deep learning recently, there are still appealing research on traditional rendering.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/&amp;text=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/&amp;t=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer&amp;body=https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/&amp;title=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer%20https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/&amp;title=Sample%20Results%20From%20an%20Anonymous%20DXR%20Renderer" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://hearwindsaying.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu5d349526cd0892b62be1eb184fae6bd1_161957_270x270_fill_q75_lanczos_center.jpg" alt="Zihong Zhou"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://hearwindsaying.github.io/">Zihong Zhou</a></h5>
+      <h6 class="card-subtitle">Have fun. Be awesome.</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:hearwindsaying@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/hearwindsaying" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/hearwindsaying" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/zihong-zhou-534b3419a/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'event' : "Events",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/js/wowchemy.min.572b7caf7fe601716a0f74d67d754c21.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>
