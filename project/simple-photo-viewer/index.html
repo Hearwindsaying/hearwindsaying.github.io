@@ -717,8 +717,6 @@
 
   
   
-    
-  
 
 
 <div class="article-container pt-3">
@@ -773,14 +771,63 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/Hearwindsaying/SimplePhotoViewer" target="_blank" rel="noopener">
+    <i class="fab fa-github mr-1"></i>
+    Code
+  </a>
+
 
 </div>
 
 
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 386px;">
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1137px; max-height: 609px;">
   <div style="position: relative">
-    <img src="/project/simple-photo-viewer/featured_hu36421ab91dbc1a662b1db4015b43cf65_1860512_720x0_resize_lanczos_3.png" alt="" class="featured-image">
-    <span class="article-header-caption">Screenshot</span>
+    <img src="/project/simple-photo-viewer/featured.png" alt="" class="featured-image">
+    
   </div>
 </div>
 
@@ -789,7 +836,179 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <h2 id="overview">Overview</h2>
+<p>This is our final assignment for the &lsquo;Object Oriented Programming&rsquo; course.
+It is a UWP (Universal Windows Platform) application for simple image viewing written in C++17/WinRT and XAML.
+Except for the UI layout and design by <a href="https://github.com/ArtlexKylin" target="_blank" rel="noopener">@ArtlexKylin</a>, I did all the implementation and optimization.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Common image format supports: png, jpg, git, bmp, tif, tga.</li>
+<li>Directory tree support for UWP and folder import support (for security purpose)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</li>
+<li>Image file manipulations.
+<ul>
+<li>Selective: single/multiple/invert selections, click and drag selection (dragable rectangle selection)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</li>
+<li>File system: copy, cut, move, paste, remove, rename and rename in batch.</li>
+<li>Efficient image searching with suggestions.</li>
+<li>Simple image viewing and edits: scaling, rotations, filters (Gaussian Blur, Exposure, Temperature etc.).</li>
+</ul>
+</li>
+<li>Image gallery viewing.
+<ul>
+<li>Automatic slide show images.</li>
+<li>Efficient thumbnails and full images showing.</li>
+</ul>
+</li>
+<li>Fluent UI design with acrylic material and adaptive layout powered by WinUI 2.0.</li>
+<li>ListView and GridView optimizations for thousands of items.
+<ul>
+<li>UI virtualization and update items on demand.</li>
+<li>Native C++17 implementation with XAML data binding support.</li>
+</ul>
+</li>
+</ul>
+<h2 id="build">Build</h2>
+<p>Currently it supports from Windows 10 version 1809 (OS build 17763) and a Windows SDK &gt;= 10.0.17763.0 is required.
+Both Visual Studio 2017 (v141) and 2019 (v142) could be used and Visual Studio&rsquo;s retarget solution should provide you with the available SDK/project verisons.
+It depends on Microsoft.UI.Xaml, Microsoft.Windows.CppWinRT and Win2D.uwp by nuget packages.</p>
+<h2 id="gallery">Gallery</h2>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-thumbnail-and-treeview-for-images-draggable-rectangle-selection-in-uwp">
+
+
+  <a data-fancybox="" href="/project/simple-photo-viewer/4_hu40aa9d60c35499b1bf6f18a2e8014db7_2236144_2000x2000_fit_lanczos_3.png" data-caption="Thumbnail and treeview for images. Draggable rectangle selection in UWP.">
+
+
+  <img data-src="/project/simple-photo-viewer/4_hu40aa9d60c35499b1bf6f18a2e8014db7_2236144_2000x2000_fit_lanczos_3.png" class="lazyload" alt="" width="1920" height="1030">
+</a>
+
+
+  
+  
+  <figcaption>
+    Thumbnail and treeview for images. Draggable rectangle selection in UWP.
+  </figcaption>
+
+
+</figure>
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-gallery-view-for-images">
+
+
+  <a data-fancybox="" href="/project/simple-photo-viewer/2_hu1cfbc7312e95efdf7c289151608b3556_3208972_2000x2000_fit_lanczos_3.png" data-caption="Gallery view for images.">
+
+
+  <img data-src="/project/simple-photo-viewer/2_hu1cfbc7312e95efdf7c289151608b3556_3208972_2000x2000_fit_lanczos_3.png" class="lazyload" alt="" width="1920" height="1030">
+</a>
+
+
+  
+  
+  <figcaption>
+    Gallery view for images.
+  </figcaption>
+
+
+</figure>
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-filters-preview">
+
+
+  <a data-fancybox="" href="/project/simple-photo-viewer/3_hu7c186e3b17bca71f59fbfa4bbd44fc0a_1196244_2000x2000_fit_lanczos_3.png" data-caption="Filters preview.">
+
+
+  <img data-src="/project/simple-photo-viewer/3_hu7c186e3b17bca71f59fbfa4bbd44fc0a_1196244_2000x2000_fit_lanczos_3.png" class="lazyload" alt="" width="1920" height="1030">
+</a>
+
+
+  
+  
+  <figcaption>
+    Filters preview.
+  </figcaption>
+
+
+</figure>
+
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>UWP app is notable at its security and safeness. In other words, it cannot access extra resources not authorized by users. So you could import the folder explicitly to give the accessibility or just turn on privacy settings for UWP app in windows settings to enable the directory tree working. Please see also <a href="https://support.microsoft.com/en-us/windows/-windows-file-system-access-and-privacy-a7d90b20-b252-0e7b-6a29-a3a688e5c7be" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/-windows-file-system-access-and-privacy-a7d90b20-b252-0e7b-6a29-a3a688e5c7be</a> for instructions.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Note that dragable rectangle selection is common in traditional win32 application (e.g. explorer.exe), but it is not compatible with fluent UI design. I still implemented this widget from scratch due to its functional convenience and assignment requirement.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
     </div>
 
     
