@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding | Lord of Light</title>
+    <link>https://hearwindsaying.github.io/category/coding/</link>
+      <atom:link href="https://hearwindsaying.github.io/category/coding/index.xml" rel="self" type="application/rss+xml" />
+    <description>Coding</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Oct 2021 22:05:12 +0800</lastBuildDate>
+    <image>
+      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_3.png</url>
+      <title>Coding</title>
+      <link>https://hearwindsaying.github.io/category/coding/</link>
+    </image>
+    
+    <item>
+      <title>Sample Results From an Anonymous DXR Renderer</title>
+      <link>https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/</link>
+      <pubDate>Thu, 28 Oct 2021 22:05:12 +0800</pubDate>
+      <guid>https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I spent a few time in 2021 learning realtime rendering techniques and graphics API such as OpenGL and DirectX 12.
+I then immediately turn to DirectX Raytracing (DXR) as a big fan of tracing rays.
+So this is yet another (the second) global illumination renderer I have written so far.
+Though it is quite similar to my first ray tracer &lt;strong&gt;Colvillea&lt;/strong&gt;, it is based on the graphics API (DXR) as opposed to GPGPU one (like CUDA or OpenCL).&lt;/p&gt;
+&lt;h2 id=&#34;some-sneaky-stuff-on-the-road&#34;&gt;Some Sneaky Stuff on the Road&lt;/h2&gt;
+&lt;p&gt;I think I might have run into some issues during the journey and doing some renderings again is indeed a bit more difficult than before.
+Well, I have learned ray tracing before and related algorithms will not change if I switch to another way of implementation &amp;ndash; no matter I write in plain C/old school C++/modern C++/CUDA/HLSL, the math and physics behind the rendering are essentially the same.
+However, the coding process could suffer:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-a-possible-two-sided-brdf-adapter-implementation-in-hlsl-2021-left-and-c11-right-the-c-code-is-from-mitsuba-05&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/sneaky_hu91bf3eff32c308f6c4fe73f240a807f1_1125690_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;A possible two-sided BRDF adapter implementation in HLSL-2021 (left) and C&amp;#43;&amp;#43;11 (right). The C&amp;#43;&amp;#43; code is from Mitsuba 0.5.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/sneaky_hu91bf3eff32c308f6c4fe73f240a807f1_1125690_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;3399&#34; height=&#34;3854&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    A possible two-sided BRDF adapter implementation in HLSL-2021 (left) and C++11 (right). The C++ code is from Mitsuba 0.5.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;For example, it is useful to support two-sided shading for the ray tracer.
+Since common 3d modeling packages such as Maya and Blender usually enable two-sided shading by default, artist may ignore the orientation of the surface during the modeling.
+If we look at a surface from backside, we could still receive the lighting reflected from this object.
+But checking the side orientation inside the implementation of BRDF classes is bothersome and inspired by Mitsuba, we have an elegant approach for this.
+The idea is to add a new so-called &lt;em&gt;two-sided BRDF&lt;/em&gt; to wrap the &lt;em&gt;one-sided BRDF&lt;/em&gt; &amp;ndash; we keep the implementation as-is in &lt;em&gt;one-sided BRDF&lt;/em&gt; (do the shading as long as the incoming ray and the outgoing ray are in the same hemisphere as the surface&amp;rsquo;s normal) and flip the ray direction in &lt;em&gt;two-sided BRDF&lt;/em&gt; when necessary.
+You could have a look at the &lt;a href=&#34;#figure-sneaky&#34;&gt;Figure 1&lt;/a&gt; if you are not sure about what I mean.&lt;/p&gt;
+&lt;p&gt;Well the coding in C++/C/C#&amp;hellip; is pretty straightforward due to the language support for class, member functions, function pointers (and even templates for C++ gurus).
+However, in HLSL, none of these great features exists and I believe it&amp;rsquo;s even worse in GLSL.
+The good news is that to avoid replicating the &lt;em&gt;two-sided BRDF&lt;/em&gt; code for each BRDF type, we could use macro&amp;hellip;
+But the bad news is HLSL&amp;rsquo;s preprocessor are not the same as C++/C&amp;rsquo;s preprocessor, which supports variadic macros for example.
+I thus have to manually emulate the variadic behavior and arguments forwarding (compared to modern C++, we could use variadic templates and perfect forwarding).
+A much more elegant approach to deal with this is introducing another abstraction:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Computer Science is a science of abstraction -creating the right model for a problem and devising the appropriate mechanizable techniques to solve it. &amp;ndash;Alfred Aho&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Fortunately, &lt;a href=&#34;https://github.com/shader-slang/slang&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slang&lt;/a&gt; does this for us &amp;ndash; a shading language enables us to write shaders efficiently with modern language features such as interfaces and generics and we could safely rely on Slang compiler to generate high performance backend code (e.g. HLSL).
+This seems to be a promising improvement worthy of trying out in the future.&lt;/p&gt;
+&lt;h2 id=&#34;sample-renderings-results&#34;&gt;Sample Renderings Results&lt;/h2&gt;
+&lt;p&gt;One advantage of writing ray tracers over rasterization is that we could generate some pretty images easily, and perhaps efficiently as well if we build atop RTX.
+Once we implement a simple integrator such as naive path tracing integrator with a decent BSDF such as &lt;a href=&#34;https://www.disneyanimation.com/publications/physically-based-shading-at-disney/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disney Principle BSDF&lt;/a&gt; and with some nice area lighting, appealing effects such as reflection and color bleeding are achieved.
+In realtime rendering however, the world is fragmented &amp;ndash; we have to deal with shadows, reflections, GIs etc. separately.
+Have a look at my blog post &lt;a href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;living room in unity&lt;/a&gt; for example, which tries to match the nice result from a simple ray tracer &lt;strong&gt;Colvillea&lt;/strong&gt; using a world-leading game engine.&lt;/p&gt;
+&lt;p&gt;So I can&amp;rsquo;t wait to quickly implement all these simple components in ray tracing and support GLTF 2.0 (featuring with PBR materials) parsing, in which way I could simply export nice scene by artists from Blender and import to the path tracer.&lt;/p&gt;
+&lt;p&gt;Here is how it looks like from the renderer:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-chessboard-scene-rendered-with-8192spp-in-8min45s-runs-in-18fps-or-55-ms-for-1-iteration-1spp-on-a-rtx-2060-minimum-gpu-requirements-for-running-dxr-api-scene-credits-httpsdavzeppelingumroadcomlqlhkchttpsdavzeppelingumroadcomlqlhkc&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/4_hu7bd46cd8477eb11bb13a0f3d45567f06_2773964_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;The chessboard scene rendered with 8192spp in 8min45s. Runs in 18fps or 55 ms for 1 iteration (1spp) on a RTX 2060 (minimum GPU requirements for running DXR API). Scene credits: &amp;lt;a href=&amp;#34;https://davzeppelin.gumroad.com/l/QlHKc&amp;#34;&amp;gt;https://davzeppelin.gumroad.com/l/QlHKc&amp;lt;/a&amp;gt;.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/4_hu7bd46cd8477eb11bb13a0f3d45567f06_2773964_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2845&#34; height=&#34;1405&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    The chessboard scene rendered with 8192spp in 8min45s. Runs in 18fps or 55 ms for 1 iteration (1spp) on a RTX 2060 (minimum GPU requirements for running DXR API). Scene credits: &lt;a href=&#34;https://davzeppelin.gumroad.com/l/QlHKc&#34;&gt;https://davzeppelin.gumroad.com/l/QlHKc&lt;/a&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Accidentally, I have set Fresnel to 1.0 for specular lobe in Disney BRDF for debugging purpose and just forgot to turn off before rendering the Chess scene and got a funny bug:
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-an-interesting-result-due-to-a-bug&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/stinger_huc403270b1c22fe9bc7a86de8003d5acb_2933622_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;An interesting result due to a bug.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/stinger_huc403270b1c22fe9bc7a86de8003d5acb_2933622_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2845&#34; height=&#34;1405&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    An interesting result due to a bug.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Besides its over brightness, featuring strong specular reflections and blurring out diffuse details, because of the wrong shading I cannot tell the opponent&amp;rsquo;s chess pieces from ours! :)
+I like rendering since sometimes I get these magical images for my bugs (instead of getting crashes and nothing in other applications).&lt;/p&gt;
+&lt;p&gt;There is another scene with more complicated geometries:&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-living-room-rendered-with-8192spp-in-19min33s-runs-in-10fps-or-100-ms-for-1-iteration-1spp-for-this-scene-scene-credits-httpswwwyoutubecomwatchvgn1bieb5pbqt44shttpswwwyoutubecomwatchvgn1bieb5pbqt44s&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/7_hu6d82ce42323c3cb4a3e0dedb5690d94a_6681547_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;The living room rendered with 8192spp in 19min33s. Runs in 10fps or 100 ms for 1 iteration (1spp) for this scene. Scene credits: &amp;lt;a href=&amp;#34;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;amp;t=44s&amp;#34;&amp;gt;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;amp;t=44s&amp;lt;/a&amp;gt;.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/7_hu6d82ce42323c3cb4a3e0dedb5690d94a_6681547_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2748&#34; height=&#34;2014&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    The living room rendered with 8192spp in 19min33s. Runs in 10fps or 100 ms for 1 iteration (1spp) for this scene. Scene credits: &lt;a href=&#34;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;t=44s&#34;&gt;https://www.youtube.com/watch?v=Gn1biEB5PbQ&amp;amp;t=44s&lt;/a&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Disney BRDF is used for all materials in the two scenes and several hidden quadlights are used as light sources.
+I also used Dr. Laurent Belcour&amp;rsquo;s &lt;a href=&#34;https://belcour.github.io/blog/research/publication/2021/06/24/sampling_bluenoise_sig21.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Screen Space Blue Noise Error Diffusion Sampler with XOR Scrambled Sobol sequence&lt;/a&gt; for high quality samples pattern.
+Finally, Intel&amp;rsquo;s OpenImageDenoiser is used for cleaning up noises left in low sample counts.&lt;/p&gt;
+&lt;h2 id=&#34;machine-learning-based-denoiser----a-savior&#34;&gt;Machine Learning Based Denoiser &amp;ndash; A Savior&lt;/h2&gt;
+&lt;p&gt;Path tracing integrator is easy to code, but it still requires tremendous effort to reach a fully converged image without noises.
+There are quite a few denoising algorithms and open source implementations available.
+Check out &lt;a href=&#34;https://alain.xyz/blog/ray-tracing-denoising&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alain Galvan&amp;rsquo;s blog&lt;/a&gt; for a good overview of ways to denoise a path tracer.
+In a nutshell, he classifies the denoising arts into sampling based (sophisticated filters such as &lt;a href=&#34;https://cg.ivd.kit.edu/english/svgf.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SVGF&lt;/a&gt;) and machine learning based method.
+&lt;a href=&#34;https://developer.nvidia.com/optix-denoiser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX Denoiser&lt;/a&gt; and &lt;a href=&#34;https://github.com/OpenImageDenoise/oidn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intel&amp;rsquo;s OpenImageDenoiser (OIDN)&lt;/a&gt; are two representatives for machine learning denoisers, which is usually shipped with production renderers like V-Ray and Blender Cycles.
+Due to its simplicity for integration, I started with OIDN.&lt;/p&gt;
+&lt;p&gt;OIDN is built and trained with Convolutional Neural Network (CNN).
+Outside the blackbox, it just works like a filter so it could be put into the postprocessing stage.
+Feed the OIDN with noisy ray tracing outputs and auxiliary buffers (albedo, normal etc.) from our AOV outputs, it gives us a noise free result in a short time.
+Well I mean a short time but it still needs some noticeable time &amp;ndash; 2s for 2K resolution on my i7-10700K CPU.&lt;/p&gt;
+&lt;p&gt;This DXR ray tracer is designed to be interactive and progressive, but 2s could really block the main/UI thread and make it unresponsive.
+So I move the denoising pass to the background thread and run it from time to time asynchronously.
+The idea is to progressively accumulate a few samples, say 64 from a well-designed Sobol sampler, and run the denoiser in the background.
+Once it is done, show this denoised image in the viewport and keep ray tracing.
+After running for a while, run the denoiser again and update the denoised image.
+This makes sense since we cannot easily spot the difference between denoising a 64spp input and 65spp input, but we do for the 64spp input and 90spp input.
+I find this approach works well in practice, trying to keep CPU and GPU busy and the user&amp;rsquo;s interaction still goes smoothly:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/irVMF4fr7e8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here are some more comparisons (drag the slide in the middle left for comparison):&lt;/p&gt;
+&lt;div class=&#34;comparison-slider&#34;&gt;
+  &lt;figure class=&#34;comparison-before&#34;&gt;
+    &lt;img src=&#34;0.png&#34;&gt;
+    &lt;div class=&#34;comparison-label&#34;&gt;100spp Ray Tracing (84.36s)&lt;/div&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&#34;comparison-after&#34;&gt;
+    &lt;img src=&#34;1.png&#34;&gt;
+    &lt;div class=&#34;comparison-label&#34;&gt;100spp Denoised (84.36s)&lt;/div&gt;
+    &lt;textarea class=&#34;comparison-resizer&#34; readonly&gt;&lt;/textarea&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;comparison-slider&#34;&gt;
+  &lt;figure class=&#34;comparison-before&#34;&gt;
+    &lt;img src=&#34;2.png&#34;&gt;
+    &lt;div class=&#34;comparison-label&#34;&gt;1024spp Ray Tracing (136.30s)&lt;/div&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&#34;comparison-after&#34;&gt;
+    &lt;img src=&#34;3.png&#34;&gt;
+    &lt;div class=&#34;comparison-label&#34;&gt;1024spp Denoised (136.30s)&lt;/div&gt;
+    &lt;textarea class=&#34;comparison-resizer&#34; readonly&gt;&lt;/textarea&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-comparisons-between-ray-traced-denoised-referenced-images&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/d3_hu8aee2ef56af18eec576b6a77f8b6b70b_2337739_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Comparisons between ray traced, denoised, referenced images.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/sample-results-from-an-anonymous-dxr-renderer/d3_hu8aee2ef56af18eec576b6a77f8b6b70b_2337739_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2390&#34; height=&#34;1289&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Comparisons between ray traced, denoised, referenced images.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;And a more easily noticeable verification is using ImageDiff to the ground truth:&lt;/p&gt;
+&lt;div class=&#34;comparison-slider&#34;&gt;
+  &lt;figure class=&#34;comparison-before&#34;&gt;
+    &lt;img src=&#34;d1.png&#34;&gt;
+  &lt;/figure&gt;
+  &lt;figure class=&#34;comparison-after&#34;&gt;
+    &lt;img src=&#34;d2.png&#34;&gt;
+    &lt;textarea class=&#34;comparison-resizer&#34; readonly&gt;&lt;/textarea&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;machine-learning-based-denoiser----a-savior-if-with-our-help&#34;&gt;Machine Learning Based Denoiser &amp;ndash; A Savior If With Our Help&lt;/h2&gt;
+&lt;p&gt;I am kind of appalled by the advertisements of &lt;a href=&#34;https://www.openimagedenoise.org/gallery.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intel&amp;rsquo;s OIDN gallery&lt;/a&gt; and after trying out myself, it looks like a lifesaver to us!
+Unfortunately, this is not the whole story.
+I cannot just forget all the sophisticated algorithms invented by diligent graphics researchers and solely focus on hoping ML denoiser improve my renderings given some &amp;lsquo;arbitrary&amp;rsquo; inputs.
+For example, if I turn off multiple importance sampling and use light sampling only:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/A1XcNAP-vjg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As is shown in the video, weird structural pattern can be seen.
+It is animated since I continuously feed the denoiser with more samples input and it tries very hard to improve the result&amp;hellip;&lt;/p&gt;
+&lt;p&gt;And with our help to reduce variance at first by using multiple importance sampling:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/k0FmWbY5dHc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The roughness is set to be low and we will have a peak specular lobe, in which case light sampling cannot help too much but BSDF sampling does, resulting far fewer noises and the denoiser works pretty well now.
+As pointed out by &lt;a href=&#34;https://cs.dartmouth.edu/~wjarosz/publications/bitterli20spatiotemporal.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bitterli et al.&lt;/a&gt;, currently these denoisers are not able to bring in the features which are not present in input samples.
+So we need to keep finding out new strategies for sampling, image reconstruction etc. to help our denoisers out.
+I suppose this is why though lots of people turn to deep learning recently, there are still appealing research on traditional rendering.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

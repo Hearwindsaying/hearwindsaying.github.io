@@ -876,7 +876,7 @@ Three
     </item>
     
     <item>
-      <title>Living-Room in Unity</title>
+      <title>Bring the Living-Room to Unity.</title>
       <link>https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/</guid>
@@ -887,7 +887,7 @@ My contribution is bringing a Benedikt Bitterli&amp;rsquo;s famous rendering sce
 &lt;p&gt;Ray tracing is an elegant algorithm used in computer graphics to synthesis realistic images.
 It shoots tremendous rays to find intersection with geometries in the scene and shading with lights and tries its best to simulate the light transport process in nature.
 The algorithm is not so fast however and it is not unusual to spend hours to days rendering a single image for the complex scenes produced by artists in the movie industry.&lt;/p&gt;
-&lt;p&gt;Rasterization on the other hand, represents a way to render in an efficient way, which is used ubiquitously in realtime rendering.
+&lt;p&gt;Rasterization on the other hand, represents a way to render efficiently, which is used ubiquitously in realtime rendering.
 Thanks to the efforts of many graphics researchers and engineers for many years, realtime rendering could already produce some good-looking images nowadays.
 Consequently, in this project I&amp;rsquo;d like to find out how good it could be in a game engine.&lt;/p&gt;
 &lt;p&gt;Note that these days realtime ray tracing becomes popular due to the introduction of NVIDIA&amp;rsquo;s RTX architecture in Turing GPUs, which is able to do the ray intersection in a lightning fast way.
@@ -958,7 +958,7 @@ We will miss the nice indirect lighting, reflections for example if we skip this
     &lt;em&gt;Update in 2021: Note that Enlighten is deprecated and we are suggested to use CPU or GPU-based Progressive Lightmapper instead.&lt;/em&gt;
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;I attempted to use Enlighten in the first place and do not have a good experience since it is laborious to play with the parameters so as to reach my expectation.
+&lt;p&gt;I attempted to use Enlighten in the first place and do not have a good experience since it is laborious to play with the parameters to reach my expectation.
 I then turned to CPU and GPU based Progressive Lightmapper for the job.
 Progressiveness indicates we could have a somewhat coarse preview immediately and it gradually gets refined as we wait.
 This is usually preferred by lots of artists since it saves time for fast iterations.&lt;/p&gt;
@@ -1093,7 +1093,7 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 
 &lt;/figure&gt;
 
-&lt;p&gt;Remember we need to specifiy the sky in the &lt;strong&gt;Lighting/Environment HDR&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Remember we need to specify the sky in the &lt;strong&gt;Lighting/Environment HDR&lt;/strong&gt;.&lt;/p&gt;
 
 
 
@@ -1161,10 +1161,10 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 
 
 
-&lt;figure id=&#34;figure-the-living-room-i-chosed&#34;&gt;
+&lt;figure id=&#34;figure-the-living-room-i-chose&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;The living room I chosed.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;The living room I chose.&#34;&gt;
 
 
   &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;357&#34; height=&#34;377&#34;&gt;
@@ -1174,7 +1174,7 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
   
   
   &lt;figcaption&gt;
-    The living room I chosed.
+    The living room I chose.
   &lt;/figcaption&gt;
 
 
@@ -1271,7 +1271,7 @@ This could reduce our time for authoring and assigning materials in Unity later.
 &lt;p&gt;After fixing all issues in the &lt;a href=&#34;#cleanup-the-scene&#34;&gt;last section&lt;/a&gt;, it should work well to export the scene as FBX and import in Unity.&lt;/p&gt;
 &lt;p&gt;However, there is an issue to be considered &amp;ndash; what is our scale of the scene?
 This is important since we have limited precision for representing decimal in computer science.
-For example, the intersection point may slightly below the surface and when it shoots a shadow ray to the light to find out whether it&amp;rsquo;s blocked or not, it will be occluded by itself &amp;ndash; a phenomena known as &lt;em&gt;shadow acne&lt;/em&gt;.&lt;/p&gt;
+For example, the intersection point may slightly below the surface and when it shoots a shadow ray to the light to find out whether it&amp;rsquo;s blocked or not, it will be occluded by itself &amp;ndash; a phenomenon known as &lt;em&gt;shadow acne&lt;/em&gt;.&lt;/p&gt;
 
 
 
@@ -1295,10 +1295,10 @@ For example, the intersection point may slightly below the surface and when it s
 
 
 
-&lt;figure id=&#34;figure-shadow-acne-artifacts-due-to-the-error-of-loating-point-image-courtesy-of-scratchpixel-20&#34;&gt;
+&lt;figure id=&#34;figure-shadow-acne-artifacts-due-to-the-error-of-floating-point-image-courtesy-of-scratchpixel-20&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Shadow acne artifacts due to the error of floating point. Image courtesy of Scratchpixel 2.0.&#34;&gt;
 
 
   &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;495&#34; height=&#34;300&#34;&gt;
@@ -1308,15 +1308,15 @@ For example, the intersection point may slightly below the surface and when it s
   
   
   &lt;figcaption&gt;
-    Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.
+    Shadow acne artifacts due to the error of floating point. Image courtesy of Scratchpixel 2.0.
   &lt;/figcaption&gt;
 
 
 &lt;/figure&gt;
 
-&lt;p&gt;An idea is to offset the intersection pooint by epsilon, which should be related to the scale of the scene.
+&lt;p&gt;An idea is to offset the intersection point by epsilon, which should be related to the scale of the scene.
 If our scene lives in a small world, &amp;lsquo;a miss (ray epsilon in this context) is as good as a mile&amp;rsquo;!
-Our scale or units thus should chosed in a &lt;em&gt;consistent&lt;/em&gt; way throughout the scene to avoid these annoying artifacts.&lt;/p&gt;
+Our scale or units thus should choose consistently throughout the scene to avoid these annoying artifacts.&lt;/p&gt;
 &lt;p&gt;One of the simplest solutions is to compare the imported scene with the default primitive in Unity.
 A standard cube here has the length of 1 meter and I just scale our scene to make it match the scale &amp;ndash; a 5m*10m*5m living room.&lt;/p&gt;
 
@@ -2092,7 +2092,7 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
 
 &lt;/figure&gt;
 
-&lt;p&gt;By comparing with the ground truth image from the ray tracing [sGT Image], we find that the glass seems to be weird and we lack all the nice occlusion from the objects.
+&lt;p&gt;By comparing with the ground truth image from the ray tracing, we find that the glass seems to be weird and we lack all the nice occlusion from the objects.
 As for the user&amp;rsquo;s experience, I think it requires artists to pay more attention to the stuff behind rendering.
 For example, we have to consider the resolution or padding for the lightmap UVs, tuning the baking parameters, fixing light leaking due to the lack of reflection probes etc.&lt;/p&gt;
 &lt;p&gt;However, the image generated still looks good and the performance in realtime framerates (~80 FPS) is appealing; or we have to wait for hours to get a noise-free image using offline ray tracing!&lt;/p&gt;

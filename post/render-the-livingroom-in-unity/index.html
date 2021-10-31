@@ -34,7 +34,7 @@
   
     
   
-  <meta name="description" content="Bring the living-room scene to Unity.">
+  <meta name="description" content="Notes This is my final project for a virtual reality and game development course. My contribution is bringing a Benedikt Bitterli&rsquo;s famous rendering scene living-room to Unity and showing how we could use various rasterization techniques to approximate the beauty image produced by offline renderer.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/">
@@ -278,8 +278,8 @@
   
   <meta property="og:site_name" content="Lord of Light">
   <meta property="og:url" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/">
-  <meta property="og:title" content="Living-Room in Unity | Lord of Light">
-  <meta property="og:description" content="Bring the living-room scene to Unity."><meta property="og:image" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png">
+  <meta property="og:title" content="Bring the Living-Room to Unity. | Lord of Light">
+  <meta property="og:description" content="Notes This is my final project for a virtual reality and game development course. My contribution is bringing a Benedikt Bitterli&rsquo;s famous rendering scene living-room to Unity and showing how we could use various rasterization techniques to approximate the beauty image produced by offline renderer."><meta property="og:image" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png">
   <meta property="twitter:image" content="https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png"><meta property="og:locale" content="en-us">
   
     
@@ -311,7 +311,7 @@
     "@type": "WebPage",
     "@id": "https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/"
   },
-  "headline": "Living-Room in Unity",
+  "headline": "Bring the Living-Room to Unity.",
   
   "image": [
     "https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/featured.png"
@@ -333,7 +333,7 @@
       "url": "https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Bring the living-room scene to Unity."
+  "description": "Notes This is my final project for a virtual reality and game development course. My contribution is bringing a Benedikt Bitterli\u0026rsquo;s famous rendering scene living-room to Unity and showing how we could use various rasterization techniques to approximate the beauty image produced by offline renderer."
 }
 </script>
 
@@ -351,7 +351,7 @@
 
 
 
-  <title>Living-Room in Unity | Lord of Light</title>
+  <title>Bring the Living-Room to Unity. | Lord of Light</title>
 
 </head>
 
@@ -722,7 +722,7 @@
 
 
 <div class="article-container pt-3">
-  <h1>Living-Room in Unity</h1>
+  <h1>Bring the Living-Room to Unity.</h1>
 
   
 
@@ -731,16 +731,6 @@
 
 <div class="article-metadata">
 
-  
-  
-  
-  
-  <div>
-    
-
-  <span >
-      Zihong Zhou</span>
-  </div>
   
   
 
@@ -775,7 +765,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/unity/">Unity</a>, <a href="/category/rendering/">Rendering</a></span>
+    <i class="fas fa-folder mr-1"></i><a href="/category/unity/">Unity</a>, <a href="/category/rendering/">Rendering</a>, <a href="/category/digital-arts/">Digital Arts</a></span>
   
 
 </div>
@@ -856,7 +846,7 @@ My contribution is bringing a Benedikt Bitterli&rsquo;s famous rendering scene l
 <p>Ray tracing is an elegant algorithm used in computer graphics to synthesis realistic images.
 It shoots tremendous rays to find intersection with geometries in the scene and shading with lights and tries its best to simulate the light transport process in nature.
 The algorithm is not so fast however and it is not unusual to spend hours to days rendering a single image for the complex scenes produced by artists in the movie industry.</p>
-<p>Rasterization on the other hand, represents a way to render in an efficient way, which is used ubiquitously in realtime rendering.
+<p>Rasterization on the other hand, represents a way to render efficiently, which is used ubiquitously in realtime rendering.
 Thanks to the efforts of many graphics researchers and engineers for many years, realtime rendering could already produce some good-looking images nowadays.
 Consequently, in this project I&rsquo;d like to find out how good it could be in a game engine.</p>
 <p>Note that these days realtime ray tracing becomes popular due to the introduction of NVIDIA&rsquo;s RTX architecture in Turing GPUs, which is able to do the ray intersection in a lightning fast way.
@@ -927,7 +917,7 @@ We will miss the nice indirect lighting, reflections for example if we skip this
     <em>Update in 2021: Note that Enlighten is deprecated and we are suggested to use CPU or GPU-based Progressive Lightmapper instead.</em>
   </div>
 </div>
-<p>I attempted to use Enlighten in the first place and do not have a good experience since it is laborious to play with the parameters so as to reach my expectation.
+<p>I attempted to use Enlighten in the first place and do not have a good experience since it is laborious to play with the parameters to reach my expectation.
 I then turned to CPU and GPU based Progressive Lightmapper for the job.
 Progressiveness indicates we could have a somewhat coarse preview immediately and it gradually gets refined as we wait.
 This is usually preferred by lots of artists since it saves time for fast iterations.</p>
@@ -1062,7 +1052,7 @@ We just need to import our HDRI panorama as a cubemap by setting the <em>Texture
 
 </figure>
 
-<p>Remember we need to specifiy the sky in the <strong>Lighting/Environment HDR</strong>.</p>
+<p>Remember we need to specify the sky in the <strong>Lighting/Environment HDR</strong>.</p>
 
 
 
@@ -1130,10 +1120,10 @@ We just need to import our HDRI panorama as a cubemap by setting the <em>Texture
 
 
 
-<figure id="figure-the-living-room-i-chosed">
+<figure id="figure-the-living-room-i-chose">
 
 
-  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png" data-caption="The living room I chosed.">
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png" data-caption="The living room I chose.">
 
 
   <img data-src="/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png" class="lazyload" alt="" width="357" height="377">
@@ -1143,7 +1133,7 @@ We just need to import our HDRI panorama as a cubemap by setting the <em>Texture
   
   
   <figcaption>
-    The living room I chosed.
+    The living room I chose.
   </figcaption>
 
 
@@ -1240,7 +1230,7 @@ This could reduce our time for authoring and assigning materials in Unity later.
 <p>After fixing all issues in the <a href="#cleanup-the-scene">last section</a>, it should work well to export the scene as FBX and import in Unity.</p>
 <p>However, there is an issue to be considered &ndash; what is our scale of the scene?
 This is important since we have limited precision for representing decimal in computer science.
-For example, the intersection point may slightly below the surface and when it shoots a shadow ray to the light to find out whether it&rsquo;s blocked or not, it will be occluded by itself &ndash; a phenomena known as <em>shadow acne</em>.</p>
+For example, the intersection point may slightly below the surface and when it shoots a shadow ray to the light to find out whether it&rsquo;s blocked or not, it will be occluded by itself &ndash; a phenomenon known as <em>shadow acne</em>.</p>
 
 
 
@@ -1264,10 +1254,10 @@ For example, the intersection point may slightly below the surface and when it s
 
 
 
-<figure id="figure-shadow-acne-artifacts-due-to-the-error-of-loating-point-image-courtesy-of-scratchpixel-20">
+<figure id="figure-shadow-acne-artifacts-due-to-the-error-of-floating-point-image-courtesy-of-scratchpixel-20">
 
 
-  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png" data-caption="Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.">
+  <a data-fancybox="" href="/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png" data-caption="Shadow acne artifacts due to the error of floating point. Image courtesy of Scratchpixel 2.0.">
 
 
   <img data-src="/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png" class="lazyload" alt="" width="495" height="300">
@@ -1277,15 +1267,15 @@ For example, the intersection point may slightly below the surface and when it s
   
   
   <figcaption>
-    Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.
+    Shadow acne artifacts due to the error of floating point. Image courtesy of Scratchpixel 2.0.
   </figcaption>
 
 
 </figure>
 
-<p>An idea is to offset the intersection pooint by epsilon, which should be related to the scale of the scene.
+<p>An idea is to offset the intersection point by epsilon, which should be related to the scale of the scene.
 If our scene lives in a small world, &lsquo;a miss (ray epsilon in this context) is as good as a mile&rsquo;!
-Our scale or units thus should chosed in a <em>consistent</em> way throughout the scene to avoid these annoying artifacts.</p>
+Our scale or units thus should choose consistently throughout the scene to avoid these annoying artifacts.</p>
 <p>One of the simplest solutions is to compare the imported scene with the default primitive in Unity.
 A standard cube here has the length of 1 meter and I just scale our scene to make it match the scale &ndash; a 5m*10m*5m living room.</p>
 
@@ -2061,7 +2051,7 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
 
 </figure>
 
-<p>By comparing with the ground truth image from the ray tracing [sGT Image], we find that the glass seems to be weird and we lack all the nice occlusion from the objects.
+<p>By comparing with the ground truth image from the ray tracing, we find that the glass seems to be weird and we lack all the nice occlusion from the objects.
 As for the user&rsquo;s experience, I think it requires artists to pay more attention to the stuff behind rendering.
 For example, we have to consider the resolution or padding for the lightmap UVs, tuning the baking parameters, fixing light leaking due to the lack of reflection probes etc.</p>
 <p>However, the image generated still looks good and the performance in realtime framerates (~80 FPS) is appealing; or we have to wait for hours to get a noise-free image using offline ray tracing!</p>
@@ -2146,12 +2136,100 @@ For example, we have to consider the resolution or padding for the lightmap UVs,
 
   
   
-    
-
 
 
 
   
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://hearwindsaying.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu5d349526cd0892b62be1eb184fae6bd1_161957_270x270_fill_q75_lanczos_center.jpg" alt="Zihong Zhou"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://hearwindsaying.github.io/">Zihong Zhou</a></h5>
+      <h6 class="card-subtitle">Have fun. Be awesome.</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:hearwindsaying@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/hearwindsaying" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/hearwindsaying" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/zihong-zhou-534b3419a/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
 
 
 
@@ -2183,6 +2261,15 @@ For example, we have to consider the resolution or padding for the lightmap UVs,
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/sample-results-from-an-anonymous-dxr-renderer/">Sample Results From an Anonymous DXR Renderer</a></li>
+      
+    </ul>
+  </div>
   
 
 
