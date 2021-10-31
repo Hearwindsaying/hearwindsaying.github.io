@@ -7,7 +7,7 @@
     <description>Physically Based Rendering</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_2.png</url>
+      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_3.png</url>
       <title>Physically Based Rendering</title>
       <link>https://hearwindsaying.github.io/tag/physically-based-rendering/</link>
     </image>
@@ -85,48 +85,8 @@
 &lt;p&gt;Building &lt;strong&gt;Colvillea&lt;/strong&gt; requires OptiX 6.0 (6.5 is preferred) and CUDA 9.0 or above installed. For graphics driver on Windows platform, driver version 436.02 or later is required. All NVIDIA GPUs of Compute Capability 5.0 (Maxwell) or higher are supported but those with Turing architecture is required to access RTX hardware acceleration.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; currently builds on Windows only using &lt;a href=&#34;http://www.cmake.org/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CMake&lt;/a&gt; and could be built using MSVC successfully. It&amp;rsquo;s recommeded that create a separte directory in the same level folder as src folder. Note that you are required to use VS2015 or above targeted for 64-bit as CUDA_HOST_COMPILER in configuration step.
 For better layout to support interactive rendering, please put imgui.ini file to the same directory as colvillea.vcxproj.&lt;/p&gt;
-&lt;h2 id=&#34;gallery&#34;&gt;Gallery&lt;/h2&gt;
-&lt;p&gt;
+&lt;h2 id=&#34;selected-images&#34;&gt;Selected Images&lt;/h2&gt;
 
-
-
-
-
-  
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-settings-for-lightmap-baking&#34;&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/example/cornell_hu0ed55a5ebf78b9a42a5e4f467fb4708a_689438_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Settings for lightmap baking.&#34;&gt;
-
-
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/cornell_hu0ed55a5ebf78b9a42a5e4f467fb4708a_689438_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;753&#34; height=&#34;559&#34;&gt;
-&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-    Settings for lightmap baking.
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
 
 
 
@@ -135,45 +95,120 @@ For better layout to support interactive rendering, please put imgui.ini file to
 
 
   
-
-
-
-  
   
 
 
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-settings-for-lightmap-baking&#34;&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/example/cornellbox_test_hu70de3d8dc832377b5d01c6a6e001f727_174952_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Settings for lightmap baking.&#34;&gt;
-
-
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/cornellbox_test_hu70de3d8dc832377b5d01c6a6e001f727_174952_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;567&#34; height=&#34;553&#34;&gt;
-&lt;/a&gt;
-
+&lt;div class=&#34;gallery&#34;&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-    Settings for lightmap baking.
-  &lt;/figcaption&gt;
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/a-frostedMetal.png&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/a-frostedMetal_hu59c8a310819ed6d018bd72aa6ddca95d_113556_0x190_resize_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;a-frostedMetal.png&#34; width=&#34;191&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/a-glass.png&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/a-glass_hu70d465a81ce493026479a1dd4713a0b0_211551_0x190_resize_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;a-glass.png&#34; width=&#34;215&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/a-roughmetal.png&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/a-roughmetal_hu6ed2ff70bea6562fe2f1a2b8573b6f36_157859_0x190_resize_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;a-roughmetal.png&#34; width=&#34;198&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/b-cornell.png&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/b-cornell_hu0ed55a5ebf78b9a42a5e4f467fb4708a_689438_0x190_resize_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;b-cornell.png&#34; width=&#34;256&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/b-result.jpg&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/b-result_hu79f93250afa5bb28f80507ab9efe2f6d_239953_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;b-result.jpg&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/b-sunset.jpg&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/b-sunset_hu2851bc59efb9025d0094e6a61ee3b4c4_282573_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;b-sunset.jpg&#34; width=&#34;107&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/b1-buhhda.jpg&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/b1-buhhda_hub15f7383a9d823f64a357d8e890f830e_52777_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;b1-buhhda.jpg&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/bunny.png&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/bunny_hu406642f55e8efa36fdc85dbd09be8763_743936_0x190_resize_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;bunny.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/dining-room_interactive.jpg&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/dining-room_interactive_hua63b8d0317dc15e37c16fffbd2751cd8_246537_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;dining-room_interactive.jpg&#34; width=&#34;354&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/featured.jpg&#34; &gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/featured_huaec7162c458e1acfbb9b9b18b10048c2_564263_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;featured.jpg&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
 
-
-&lt;/figure&gt;
-&lt;/p&gt;
+  
+&lt;/div&gt;
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia OptiX&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA OptiX&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mmp/pbrt-v3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PBRT&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mitsuba-renderer/mitsuba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mitsuba&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

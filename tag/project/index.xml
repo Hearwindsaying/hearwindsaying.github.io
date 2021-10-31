@@ -7,7 +7,7 @@
     <description>Project</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_2.png</url>
+      <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_3.png</url>
       <title>Project</title>
       <link>https://hearwindsaying.github.io/tag/project/</link>
     </image>
@@ -74,10 +74,10 @@ We will miss the nice indirect lighting, reflections for example if we skip this
 &lt;figure id=&#34;figure-two-global-illumination-systems-in-unity-engine-image-courtesy-of-unity-documentation&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Two global illumination systems in Unity engine. Image courtesy of Unity documentation.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Two global illumination systems in Unity engine. Image courtesy of Unity documentation.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2351&#34; height=&#34;2500&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/gi_selection_hua26d8df2103457302fbfc682f04efea9_406816_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2351&#34; height=&#34;2500&#34;&gt;
 &lt;/a&gt;
 
 
@@ -127,10 +127,10 @@ This is usually preferred by lots of artists since it saves time for fast iterat
 &lt;figure id=&#34;figure-our-sunset-skybox-for-the-living-room&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Our sunset skybox for the living room.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Our sunset skybox for the living room.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;816&#34; height=&#34;412&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/preview-sky_hubdd691bfcb56470ac77983f49f64118c_107420_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;816&#34; height=&#34;412&#34;&gt;
 &lt;/a&gt;
 
 
@@ -171,10 +171,10 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 &lt;figure id=&#34;figure-import-our-skybox-with-cubemap-and-trilinear-filter&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Import our skybox with cubemap and trilinear filter.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Import our skybox with cubemap and trilinear filter.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;526&#34; height=&#34;913&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/sky_hu99c0f549956912e1c05f729b784d2551_98905_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;526&#34; height=&#34;913&#34;&gt;
 &lt;/a&gt;
 
 
@@ -214,10 +214,10 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 &lt;figure id=&#34;figure-set-up-the-hdri-sky-in-volume&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Set up the HDRI Sky in Volume.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Set up the HDRI Sky in Volume.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;524&#34; height=&#34;603&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k1-volume_hu5d239a4fff77850319bec18e785299c2_41828_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;524&#34; height=&#34;603&#34;&gt;
 &lt;/a&gt;
 
 
@@ -257,10 +257,10 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 &lt;figure id=&#34;figure-specify-our-sky-in-lighting&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Specify our sky in Lighting.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Specify our sky in Lighting.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;526&#34; height=&#34;147&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/k0-hdri_hu7abc091b94530d9ed6cc69867db6611e_14655_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;526&#34; height=&#34;147&#34;&gt;
 &lt;/a&gt;
 
 
@@ -301,10 +301,10 @@ We just need to import our HDRI panorama as a cubemap by setting the &lt;em&gt;T
 &lt;figure id=&#34;figure-the-living-room-i-chosed&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The living room I chosed.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;The living room I chosed.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;357&#34; height=&#34;377&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s1_about_the_scene_hu350185b3c38b62c15b8396f0ca354de7_234245_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;357&#34; height=&#34;377&#34;&gt;
 &lt;/a&gt;
 
 
@@ -345,10 +345,10 @@ This could reduce our time for authoring and assigning materials in Unity later.
 &lt;figure id=&#34;figure-group-and-name-objects-by-materials-in-maya&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Group and name objects by materials in Maya.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Group and name objects by materials in Maya.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;406&#34; height=&#34;659&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s2-maya-group_hu8259d58428a0ed5c619003201f809572_54871_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;406&#34; height=&#34;659&#34;&gt;
 &lt;/a&gt;
 
 
@@ -388,10 +388,10 @@ This could reduce our time for authoring and assigning materials in Unity later.
 &lt;figure id=&#34;figure-visualize-the-normal-to-check-the-face-orientation&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Visualize the normal to check the face orientation.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Visualize the normal to check the face orientation.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1028&#34; height=&#34;433&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s3-fix-normals_huc6ab547b876d684fbdc5574d665b69bd_116357_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1028&#34; height=&#34;433&#34;&gt;
 &lt;/a&gt;
 
 
@@ -435,10 +435,10 @@ For example, the intersection point may slightly below the surface and when it s
 &lt;figure id=&#34;figure-shadow-acne-artifacts-due-to-the-error-of-loating-point-image-courtesy-of-scratchpixel-20&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Shadow acne artifacts due to the error of loating point. Image courtesy of Scratchpixel 2.0.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;495&#34; height=&#34;300&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/shadow-acne_huae33be763e457e02e9f30c734dc3c82b_67078_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;495&#34; height=&#34;300&#34;&gt;
 &lt;/a&gt;
 
 
@@ -482,10 +482,10 @@ A standard cube here has the length of 1 meter and I just scale our scene to mak
 &lt;figure id=&#34;figure-scale-our-scene-according-to-the-standard-cube-in-unity-to-fix-the-unit&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Scale our scene according to the standard cube in Unity to fix the unit.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Scale our scene according to the standard cube in Unity to fix the unit.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1141&#34; height=&#34;913&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s4-fix-units_huf77f1ccd5971731f43d7a94b0eb08397_313746_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1141&#34; height=&#34;913&#34;&gt;
 &lt;/a&gt;
 
 
@@ -528,10 +528,10 @@ So enable the paneling, ceiling, floor, wall and the fireplace glass only and ti
 &lt;figure id=&#34;figure-parameters-required-to-contribute-global-illumination&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Parameters required to contribute global illumination.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Parameters required to contribute global illumination.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;722&#34; height=&#34;424&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s5-test-gi_hu85dcdafa156fa4c3540bb47e9082aa0b_60566_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;722&#34; height=&#34;424&#34;&gt;
 &lt;/a&gt;
 
 
@@ -571,10 +571,10 @@ So enable the paneling, ceiling, floor, wall and the fireplace glass only and ti
 &lt;figure id=&#34;figure-settings-for-lightmap-baking&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Settings for lightmap baking.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Settings for lightmap baking.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;488&#34; height=&#34;839&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s7-bake-settings_hub785a82e1ae4847f984efaa34704e828_64608_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;488&#34; height=&#34;839&#34;&gt;
 &lt;/a&gt;
 
 
@@ -622,10 +622,10 @@ This is done by Unity by enabling &lt;strong&gt;Generate Lightmap UVs&lt;/strong
 &lt;figure id=&#34;figure-let-unity-generate-the-lightmap-uvs-for-us&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Let Unity generate the lightmap UVs for us.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Let Unity generate the lightmap UVs for us.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;472&#34; height=&#34;347&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s6-bake-lightmap_hu1b611a90266552ce4aaf65ee5ff737aa_28564_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;472&#34; height=&#34;347&#34;&gt;
 &lt;/a&gt;
 
 
@@ -686,10 +686,10 @@ I just use a simple &lt;strong&gt;HDRP/Lit&lt;/strong&gt; shader with &lt;strong
 &lt;figure id=&#34;figure-setup-for-our-ceiling-material-to-match-a-lambertian-bsdf&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Setup for our ceiling material to match a Lambertian BSDF.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Setup for our ceiling material to match a Lambertian BSDF.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;487&#34; height=&#34;744&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s8-ceiling_hue3e5938cd77d6a0f4b9b36a4f19f5511_47924_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;487&#34; height=&#34;744&#34;&gt;
 &lt;/a&gt;
 
 
@@ -729,10 +729,10 @@ I just use a simple &lt;strong&gt;HDRP/Lit&lt;/strong&gt; shader with &lt;strong
 &lt;figure id=&#34;figure-illustration-for-light-transport-in-a-rough-coating-bsdf-image-courtesy-of-mitsuba-05-documentation&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Illustration for light transport in a rough-coating BSDF. Image courtesy of Mitsuba 0.5 documentation.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Illustration for light transport in a rough-coating BSDF. Image courtesy of Mitsuba 0.5 documentation.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;276&#34; height=&#34;182&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/bsdf-roughcoating_hu3f79080cbf3f02342fde08edac28fffc_24073_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;276&#34; height=&#34;182&#34;&gt;
 &lt;/a&gt;
 
 
@@ -774,10 +774,10 @@ Here is what we have for the floor:&lt;/p&gt;
 &lt;figure id=&#34;figure-shader-graph-setup-for-the-layered-floor-material&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Shader Graph setup for the layered floor material.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Shader Graph setup for the layered floor material.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1029&#34; height=&#34;597&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s9-floor_hu1a47d37f5f18a40c9d8363819b464c8d_166244_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1029&#34; height=&#34;597&#34;&gt;
 &lt;/a&gt;
 
 
@@ -817,10 +817,10 @@ Here is what we have for the floor:&lt;/p&gt;
 &lt;figure id=&#34;figure-shader-graph-setup-for-the-paneling&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Shader Graph setup for the paneling.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Shader Graph setup for the paneling.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1028&#34; height=&#34;656&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s10-paneling_hud6a9fa9d9b3b7164ee5b05ac03baeee1_122837_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1028&#34; height=&#34;656&#34;&gt;
 &lt;/a&gt;
 
 
@@ -864,10 +864,10 @@ Clicking &lt;strong&gt;Bake&lt;/strong&gt; option under the &lt;strong&gt;Lighti
 &lt;figure id=&#34;figure-fix-the-reflection-of-our-fireplace&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Fix the reflection of our fireplace.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Fix the reflection of our fireplace.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;497&#34; height=&#34;884&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s11-probe_huf7311762a8657f1581716e2d2d8655e4_642384_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;497&#34; height=&#34;884&#34;&gt;
 &lt;/a&gt;
 
 
@@ -952,10 +952,10 @@ This is due to the lack of another reflection probe for the scene.&lt;/p&gt;
 &lt;figure id=&#34;figure-use-yet-another-reflection-probe-for-interior-reflections&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Use yet another reflection probe for interior reflections.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Use yet another reflection probe for interior reflections.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;838&#34; height=&#34;739&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s13-probe_hu2cd6589240396ec2e70578358766f6a4_351086_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;838&#34; height=&#34;739&#34;&gt;
 &lt;/a&gt;
 
 
@@ -995,10 +995,10 @@ This is due to the lack of another reflection probe for the scene.&lt;/p&gt;
 &lt;figure id=&#34;figure-a-corrected-interior-look&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;A corrected interior look.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;A corrected interior look.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1147&#34; height=&#34;915&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s14-fixed-probe_hu2e1beffb6dc2d6aef9eba3883c524c79_1796049_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1147&#34; height=&#34;915&#34;&gt;
 &lt;/a&gt;
 
 
@@ -1044,10 +1044,10 @@ The sofa, painting, pot, leaves and dirt are just the Lambertians so &lt;strong&
 &lt;figure id=&#34;figure-material-setup-for-the-leaves&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Material setup for the leaves.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Material setup for the leaves.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;677&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s15-leaves_hu9fa8ead7ed8f99c0081f098db4326a0f_48926_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;677&#34;&gt;
 &lt;/a&gt;
 
 
@@ -1087,10 +1087,10 @@ The sofa, painting, pot, leaves and dirt are just the Lambertians so &lt;strong&
 &lt;figure id=&#34;figure-material-setup-for-the-glass&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Material setup for the glass.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Material setup for the glass.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;557&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s16-glass_huf41281ace084686322704a8f74c9be37_38573_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;557&#34;&gt;
 &lt;/a&gt;
 
 
@@ -1131,10 +1131,10 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
 &lt;figure id=&#34;figure-enable-screen-space-refraction-in-the-volume-setting&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Enable Screen Space Refraction in the volume setting.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Enable Screen Space Refraction in the volume setting.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;487&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s18-glass_hu42099c2298054070666b371df6c103e4_37353_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;487&#34; height=&#34;500&#34;&gt;
 &lt;/a&gt;
 
 
@@ -1175,10 +1175,10 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
 &lt;figure id=&#34;figure-final-baked-result-for-the-living-room-in-unity&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Final baked result for the living room in Unity!&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Final baked result for the living room in Unity!&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1025&#34; height=&#34;814&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s19-final_hu63d3b0438845b5173e3df9478da16846_1250146_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1025&#34; height=&#34;814&#34;&gt;
 &lt;/a&gt;
 
 
@@ -1260,10 +1260,10 @@ For example, we have to consider the resolution or padding for the lightmap UVs,
 &lt;figure id=&#34;figure-featured-image-for-the-living-room-after-post-processing&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Featured image for the living-room after post processing.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;Featured image for the living-room after post processing.&#34;&gt;
 
 
-  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1137&#34; height=&#34;912&#34;&gt;
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/post/render-the-livingroom-in-unity/s20-post-process_hu12b3998c6f435296f99393114ce4c24f_1826204_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1137&#34; height=&#34;912&#34;&gt;
 &lt;/a&gt;
 
 
