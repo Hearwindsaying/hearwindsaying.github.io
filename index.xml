@@ -243,6 +243,11 @@ Once it is done, show this denoised image in the viewport and keep ray tracing.
 After running for a while, run the denoiser again and update the denoised image.
 This makes sense since we cannot easily spot the difference between denoising a 64spp input and 65spp input, but we do for the 64spp input and 90spp input.
 I find this approach works well in practice, trying to keep CPU and GPU busy and the user&amp;rsquo;s interaction still goes smoothly:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/irVMF4fr7e8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Here are some more comparisons (drag the slide in the middle left for comparison):&lt;/p&gt;
 &lt;div class=&#34;comparison-slider&#34;&gt;
   &lt;figure class=&#34;comparison-before&#34;&gt;
@@ -323,9 +328,19 @@ I find this approach works well in practice, trying to keep CPU and GPU busy and
 Unfortunately, this is not the whole story.
 I cannot just forget all the sophisticated algorithms invented by diligent graphics researchers and solely focus on hoping ML denoiser improve my renderings given some &amp;lsquo;arbitrary&amp;rsquo; inputs.
 For example, if I turn off multiple importance sampling and use light sampling only:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/A1XcNAP-vjg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;As is shown in the video, weird structural pattern can be seen.
 It is animated since I continuously feed the denoiser with more samples input and it tries very hard to improve the result&amp;hellip;&lt;/p&gt;
 &lt;p&gt;And with our help to reduce variance at first by using multiple importance sampling:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/k0FmWbY5dHc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;The roughness is set to be low and we will have a peak specular lobe, in which case light sampling cannot help too much but BSDF sampling does, resulting far fewer noises and the denoiser works pretty well now.
 As pointed out by &lt;a href=&#34;https://cs.dartmouth.edu/~wjarosz/publications/bitterli20spatiotemporal.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bitterli et al.&lt;/a&gt;, currently these denoisers are not able to bring in the features which are not present in input samples.
 So we need to keep finding out new strategies for sampling, image reconstruction etc. to help our denoisers out.
