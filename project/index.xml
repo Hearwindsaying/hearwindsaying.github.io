@@ -386,17 +386,17 @@ It depends on Microsoft.UI.Xaml, Microsoft.Windows.CppWinRT and Win2D.uwp by nug
 
 &lt;/figure&gt;
 
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;UWP app is notable at its security and safeness. In other words, it cannot access extra resources not authorized by users. So you could import the folder explicitly to give the accessibility or just turn on privacy settings for UWP app in windows settings to enable the directory tree working. Please see also &lt;a href=&#34;https://support.microsoft.com/en-us/windows/-windows-file-system-access-and-privacy-a7d90b20-b252-0e7b-6a29-a3a688e5c7be&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://support.microsoft.com/en-us/windows/-windows-file-system-access-and-privacy-a7d90b20-b252-0e7b-6a29-a3a688e5c7be&lt;/a&gt; for instructions.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;Note that dragable rectangle selection is common in traditional win32 application (e.g. explorer.exe), but it is not compatible with fluent UI design. I still implemented this widget from scratch due to its functional convenience and assignment requirement.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -1213,7 +1213,7 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
 &lt;figure id=&#34;figure-path-traced-reference-image-rendered-by-my-colvilleahttpshearwindsayinggithubioprojectexample-renderer&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;../../project/example/featured.jpg&#34; data-caption=&#34;Path traced reference image rendered by my &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;#34;https://hearwindsaying.github.io/project/example/&amp;#34;&amp;gt;Colvillea&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt; renderer.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;../../project/example/featured.jpg&#34; data-caption=&#34;Path traced reference image rendered by my &amp;lt;strong&amp;gt;&amp;lt;a href=&amp;#34;https://hearwindsaying.github.io/project/example/&amp;#34; target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener&amp;#34;&amp;gt;Colvillea&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt; renderer.&#34;&gt;
 
 
   &lt;img src=&#34;../../project/example/featured.jpg&#34; alt=&#34;&#34;  &gt;
@@ -1223,7 +1223,7 @@ Refraction is notoriously difficult to achieve in realtime rendering and is usua
   
   
   &lt;figcaption&gt;
-    Path traced reference image rendered by my &lt;strong&gt;&lt;a href=&#34;https://hearwindsaying.github.io/project/example/&#34;&gt;Colvillea&lt;/a&gt;&lt;/strong&gt; renderer.
+    Path traced reference image rendered by my &lt;strong&gt;&lt;a href=&#34;https://hearwindsaying.github.io/project/example/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Colvillea&lt;/a&gt;&lt;/strong&gt; renderer.
   &lt;/figcaption&gt;
 
 
