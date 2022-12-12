@@ -5,12 +5,20 @@
     <link>https://hearwindsaying.github.io/project/</link>
       <atom:link href="https://hearwindsaying.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 12 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://hearwindsaying.github.io/images/icon_huc3d79214bb0743bd121a6e63ddf073c8_236102_512x512_fill_lanczos_center_3.png</url>
       <title>Projects</title>
       <link>https://hearwindsaying.github.io/project/</link>
     </image>
+    
+    <item>
+      <title>Rendering Competition FA22</title>
+      <link>https://hearwindsaying.github.io/project/rendering-competition/</link>
+      <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://hearwindsaying.github.io/project/rendering-competition/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Colvillea</title>
@@ -23,6 +31,11 @@
 --&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Colvillea&lt;/strong&gt; is a physically based global illumination renderer running on GPU. It relies on &lt;a href=&#34;https://developer.nvidia.com/optix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NVIDIA&amp;rsquo;s OptiX&lt;/a&gt; to achieve parallelism by leveraging GPU resources, resulting in high performance ray tracing rendering.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    This project is archived and I am working on a new version of &lt;strong&gt;Colvillea&lt;/strong&gt; that has much better performance thanks to OptiX 7 and wavefront path tracing.
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
 &lt;p&gt;Here are some motivations and objectives of building Colvillea:&lt;/p&gt;
 &lt;ul&gt;
@@ -52,7 +65,7 @@
 &lt;li&gt;Halton QMC Sampler (Fast Random Permutation)&lt;/li&gt;
 &lt;li&gt;Sobol QMC Sampler&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;filter-progressive&#34;&gt;Filter (Progressive)&lt;/h3&gt;
+&lt;h3 id=&#34;filter&#34;&gt;Filter&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Box filter&lt;/li&gt;
 &lt;li&gt;Gaussian filter&lt;/li&gt;
