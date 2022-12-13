@@ -21,6 +21,436 @@
     </item>
     
     <item>
+      <title>3D Digital Modeling FA22</title>
+      <link>https://hearwindsaying.github.io/project/cs22-modeling/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://hearwindsaying.github.io/project/cs22-modeling/</guid>
+      <description>&lt;p&gt;Here are some of selected shots from &lt;a href=&#34;https://www.cs22.space/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof. Lorie Loeb&amp;rsquo;s modeling class&lt;/a&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; I took in Fall 22.
+Interestingly, I also took &lt;a href=&#34;https://cs87-dartmouth.github.io/Fall2022/darts-overview.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof. Wojciech Jarosz&amp;rsquo;s rendering algorithms&lt;/a&gt; in FA22 and they are somewhat complementary to each other.
+Rendering Algorithms tells us how to render photorealistic images given the scene and Digital Modeling tells us how to author the scene for a renderer and use the renderer from an artistic perspective.&lt;/p&gt;
+&lt;h1 id=&#34;classroom&#34;&gt;Classroom&lt;/h1&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-motivation-image-from-artstation-credits-httpswwwartstationcomartworkl20kbl&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://cdna.artstation.com/p/assets/images/images/022/431/184/large/u-like-erkinbekov-school-room7.jpg?1575407742&#34; data-caption=&#34;Motivation image from artstation. Credits: &amp;lt;a href=&amp;#34;https://www.artstation.com/artwork/L20Kbl&amp;#34; target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener&amp;#34;&amp;gt;https://www.artstation.com/artwork/L20Kbl&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img src=&#34;https://cdna.artstation.com/p/assets/images/images/022/431/184/large/u-like-erkinbekov-school-room7.jpg?1575407742&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Motivation image from artstation. Credits: &lt;a href=&#34;https://www.artstation.com/artwork/L20Kbl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.artstation.com/artwork/L20Kbl&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-attempts-at-reproducing-the-motivation-classroom-with-some-customization&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/1-try-to-match-reference-img_hucace7f317d222a89e0190e640c2af0e0_697670_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Attempts at reproducing the motivation classroom, with some customization.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/1-try-to-match-reference-img_hucace7f317d222a89e0190e640c2af0e0_697670_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1920&#34; height=&#34;1080&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Attempts at reproducing the motivation classroom, with some customization.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-best-shot-i-love-cs87287-rendering-algorithms-is-so-hard&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/featured_hua73ce4058869f1c023ff2aadb4e1e8f4_2227249_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Best shot I love. CS87/287 Rendering Algorithms is so hard!&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/featured_hua73ce4058869f1c023ff2aadb4e1e8f4_2227249_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;3840&#34; height=&#34;2161&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Best shot I love. CS87/287 Rendering Algorithms is so hard!
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-bring-pbrt-into-live&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/3-bring-pbrt-alive-and-correct_hu11322f014109cbd952025796292077e7_1584806_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Bring pbrt into live!&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/3-bring-pbrt-alive-and-correct_hu11322f014109cbd952025796292077e7_1584806_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;3840&#34; height=&#34;2160&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Bring pbrt into live!
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-looking-back-at-the-classroom&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/4-looking-back_hu40c721767511693d1f0f5bf95267ec9d_2198218_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Looking back at the classroom.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/4-looking-back_hu40c721767511693d1f0f5bf95267ec9d_2198218_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;3840&#34; height=&#34;2161&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Looking back at the classroom.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-scratch-with-some-volumetrics-rendering&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/5-scratch-some-volumetrics_hu6de2e470d03a2ad493a9a4416b81c8e4_1775247_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Scratch with some volumetrics rendering.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/5-scratch-some-volumetrics_hu6de2e470d03a2ad493a9a4416b81c8e4_1775247_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;3840&#34; height=&#34;2160&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Scratch with some volumetrics rendering.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-portal-in-big-hero-6-image-credits-httpalexeystomakhincomresearchportalhtml&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/portal_hufc93a977323a4aae5ef567a26813e3f8_68473_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Portal in Big Hero 6. Image credits: &amp;lt;a href=&amp;#34;http://alexey.stomakhin.com/research/portal.html&amp;#34; target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener&amp;#34;&amp;gt;http://alexey.stomakhin.com/research/portal.html&amp;lt;/a&amp;gt;&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/portal_hufc93a977323a4aae5ef567a26813e3f8_68473_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;267&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Portal in Big Hero 6. Image credits: &lt;a href=&#34;http://alexey.stomakhin.com/research/portal.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://alexey.stomakhin.com/research/portal.html&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;My abstract design is inspired by a &lt;a href=&#34;https://media.disneyanimation.com/uploads/production/publication_asset/140/asset/BH6_Into_the_Portal.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;talk at SIGGRAPH 2015 &amp;ndash; Big Hero 6: Into the Portal&lt;/a&gt;. 
+They author this portal using a variation of Mandelbrot fractals with volumetric path tracing.
+I went in another direction instead by applying deformers to geometry.&lt;/p&gt;
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-my-portal-design-wip-rendered-with-arnold-for-maya-2022&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/wip_abstract_hub41853c742e536a8b609a0843ff8a78c_1362020_2000x2000_fit_lanczos_3.png&#34; data-caption=&#34;My portal design WIP. Rendered with Arnold for Maya 2022&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/wip_abstract_hub41853c742e536a8b609a0843ff8a78c_1362020_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;978&#34; height=&#34;804&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    My portal design WIP. Rendered with Arnold for Maya 2022
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-final-rendering-for-my-abstract&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://hearwindsaying.github.io/project/cs22-modeling/zihong_abstract_hu8d710f3b0e4813904586751fb647cf51_505494_2000x2000_fit_q75_lanczos.jpg&#34; data-caption=&#34;Final rendering for my abstract.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://hearwindsaying.github.io/project/cs22-modeling/zihong_abstract_hu8d710f3b0e4813904586751fb647cf51_505494_2000x2000_fit_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1920&#34; height=&#34;1080&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
+    Final rendering for my abstract.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;credits&#34;&gt;Credits&lt;/h1&gt;
+&lt;p&gt;Modeling, UV layout and rendering are done by myself.
+Textures are external resources:&lt;/p&gt;
+&lt;p&gt;Mathematicians:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.thefamouspeople.com/profiles/archimedes-422.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.thefamouspeople.com/profiles/archimedes-422.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#/media/File:Carl_Friedrich_Gauss_1840_by_Jensen.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#/media/File:Carl_Friedrich_Gauss_1840_by_Jensen.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Leonhard_Euler#/media/File:Leonhard_Euler_-_edit1.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Leonhard_Euler#/media/File:Leonhard_Euler_-_edit1.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.usna.edu/Users/math/meh/riemann.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.usna.edu/Users/math/meh/riemann.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://scihi.org/wp-content/uploads/2014/04/Henri_Poincare2.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scihi.org/wp-content/uploads/2014/04/Henri_Poincare2.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://scihi.org/henri-poincare/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scihi.org/henri-poincare/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange#/media/File&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange#/media/File&lt;/a&gt;:Лагранж.jpg&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sapaviva.com/euclid-of-alexandria/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sapaviva.com/euclid-of-alexandria/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/David_Hilbert&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/David_Hilbert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz#/media/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz#/media/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/e/ef/Alexander_Grothendieck.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/e/ef/Alexander_Grothendieck.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/f/f3/Pierre_de_Fermat.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/f/f3/Pierre_de_Fermat.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/5/53/Evariste_galois.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/5/53/Evariste_galois.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.daviddarling.info/images/Riemann.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.daviddarling.info/images/Riemann.jpg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mapsofindia.com/world-map/world-political-map-2020.jpg?v:1.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.mapsofindia.com/world-map/world-political-map-2020.jpg?v:1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Others:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chalkboard: &lt;a href=&#34;https://www.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_20038789.htm#query=chalkboard%20texture&amp;amp;position=3&amp;amp;from_view=keyword&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_20038789.htm#query=chalkboard%20texture&amp;position=3&amp;from_view=keyword&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Wall hangings are from my portfolio: &lt;a href=&#34;https://hearwindsaying.github.io/portfolioWeb/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://hearwindsaying.github.io/portfolioWeb/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Grid texture and pbrt book cover textures are from pbrt-v2 (miscquads.pbrt）: &lt;a href=&#34;https://www.pbrt.org/scenes-v2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.pbrt.org/scenes-v2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MDLHandbook picture is from NVIDIA MDL Handbook:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mdlhandbook.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://mdlhandbook.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Several book pages are from pbrt-v3: &lt;a href=&#34;https://pbr-book.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pbr-book.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HDRI are from: &lt;a href=&#34;https://polyhaven.com/a/garden_nook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://polyhaven.com/a/garden_nook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quiz pages are from CS87/287 Rendering Algorithms Quiz&lt;/li&gt;
+&lt;li&gt;Source images for wine bottle: &lt;a href=&#34;https://www.youtube.com/watch?v=4R0e6O5afE4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.youtube.com/watch?v=4R0e6O5afE4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;I have two shots, room and abstract rendering featured on the course website (Winter 23 version)!&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Colvillea</title>
       <link>https://hearwindsaying.github.io/project/example/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
@@ -204,7 +634,7 @@ For better layout to support interactive rendering, please put imgui.ini file to
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/featured.jpg&#34; &gt;
-      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/featured_huaec7162c458e1acfbb9b9b18b10048c2_564263_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;featured.jpg&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/featured_hu4b611c327ee85ccd23fd08eb8d69f4aa_758106_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;featured.jpg&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 

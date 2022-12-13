@@ -23,20 +23,23 @@
     <loc>https://hearwindsaying.github.io/post/pbrt-v4-talk/</loc>
     <lastmod>2022-05-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hearwindsaying.github.io/categories/</loc>
+    <lastmod>2022-05-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hearwindsaying.github.io/tag/gpu-ray-tracing/</loc>
+    <lastmod>2022-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hearwindsaying.github.io/category/gpu-ray-tracing/</loc>
     <lastmod>2022-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hearwindsaying.github.io/tag/pbrt-v4/</loc>
     <lastmod>2022-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hearwindsaying.github.io/post/</loc>
+    <loc>https://hearwindsaying.github.io/category/pbrt-v4/</loc>
     <lastmod>2022-05-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hearwindsaying.github.io/categories/</loc>
-    <lastmod>2021-10-28T22:05:12+08:00</lastmod>
-  </url><url>
-    <loc>https://hearwindsaying.github.io/category/coding/</loc>
-    <lastmod>2021-10-28T22:05:12+08:00</lastmod>
+    <loc>https://hearwindsaying.github.io/post/</loc>
+    <lastmod>2022-05-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hearwindsaying.github.io/category/rendering/</loc>
     <lastmod>2021-10-28T22:05:12+08:00</lastmod>
@@ -56,13 +59,22 @@
     <loc>https://hearwindsaying.github.io/publication/triplesphere/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://hearwindsaying.github.io/project/cs22-modeling/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hearwindsaying.github.io/project/example/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hearwindsaying.github.io/tag/digital-arts/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hearwindsaying.github.io/tag/gpu/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hearwindsaying.github.io/tag/ray-tracing/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hearwindsaying.github.io/tag/rendering/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hearwindsaying.github.io/tag/digital-art/</loc>

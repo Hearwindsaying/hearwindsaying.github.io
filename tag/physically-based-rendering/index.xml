@@ -204,7 +204,7 @@ For better layout to support interactive rendering, please put imgui.ini file to
     
     
     &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://hearwindsaying.github.io/project/example/gallery/featured.jpg&#34; &gt;
-      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/featured_huaec7162c458e1acfbb9b9b18b10048c2_564263_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;featured.jpg&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
+      &lt;img data-src=&#34;https://hearwindsaying.github.io/project/example/gallery/featured_hu4b611c327ee85ccd23fd08eb8d69f4aa_758106_0x190_resize_q75_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;featured.jpg&#34; width=&#34;338&#34; height=&#34;190&#34;&gt;
     &lt;/a&gt;
   
 
